@@ -5,7 +5,12 @@
     <meta charset="utf-8">
     <title>Document</title>
     <style>
-
+      a:visited {
+        color: orange;
+      }
+      a:link {
+        color: pink;
+      }
       p.a[tabindex="1"]:focus {
         color: blue;
       }
@@ -18,33 +23,24 @@
       body > :first-child {
         color: red;
       }
-
-      p.a.c span:first-child{
+      p.a.c :nth-child(1) {
         color: red;
       }
-      p.a.c span :nth-child(1) {
+      p.a.c :nth-child(2) {
         color: green;
       }
-      p.a.c span:nth-child(2) {
+      p.a.c :nth-child(3) {
         color: blue;
       }
-
-      div a:visited {
-        color: orange;
-      }
-      div a:link {
-        color: pink;
-      }
-      div [href^="mailto:" i]:link {
+      [href*="mailto" i]:link {
         color: blue;
       }
-      div [href^="tel" i]:link {
+      [href*="tel" i]:link {
         color: yellow;
       }
-      div [href$="pdf" i]:link {
+      [href*="pdf" i]:link {
         font-size: 30px;
       }
-
       div.a ul li:nth-child(n+4):nth-child(-n+7) {
         color: red;
       }
@@ -57,7 +53,6 @@
       div.b ul li:nth-child(n+35):nth-child(-n+50) {
         color: blue;
       }
-
       div.prime ul{
         color: red;
       }
@@ -76,10 +71,10 @@
     <p class="a" tabindex="1" >鼠标悬浮时为红色，按下去时为绿色，获得焦点时为蓝色</p>
 
     <p class="a c">
-      <span>
+      <span >
         红色
-        <span>绿色</span>
-        <span>蓝色</span>
+        <span style="color: green;">绿色</span>
+        <span style="color: blue;">蓝色</span>
       </span>
     </p>
 
