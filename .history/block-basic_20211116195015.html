@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div.a {
+      background-color: red;
+    }
+    div.a p {
+      width: 600px;
+      margin: auto;
+    }
+
+    div.b {
+      width: 600px;
+      height: 240px;
+      border: black solid 1px;
+      margin: 20px auto;
+    }
+    div.b p {
+      width: 580px;
+      height: 60px;
+      margin: 10px;
+      overflow:scroll;
+      overflow: auto;
+    }
+    div.b p:nth-child(2) {
+      vertical-align: bottom;
+    }
+    div.b div {
+      height: 80px;
+      width: 580px;
+      margin: auto;
+      background-color: #ee82ee;
+      cursor: pointer;
+      transition: all 0.6s;
+    }
+    div.b div:hover {
+      transition: scale(1.4);
+    }
+  </style>
+</head>
+<body>
+  <div class="a">
+    <p>aaaa</p>
+  </div>
+
+  <div class="b">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae sapiente voluptas officiis, praesentium, nemo iure cumque nihil, facere hic asperiores dicta commodi magni, voluptates eaque esse atque nesciunt! Cupiditate, modi.
+    </p>
+    <div></div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos modi accusantium deleniti consequuntur, enim nulla voluptatum qui ducimus esse rem eius eligendi consequatur sint. Sunt ut, est iusto neque numquam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam animi perspiciatis eos, molestias provident, quae ullam! Obcaecati suscipit optio labore iusto veniam facere, amet officiis, eveniet voluptatibus molestiae, dignissimos dolor!</p>
+  </div>
+</body>
+</html>
