@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    html,body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      height: 66px;
+      background-color: beige;
+      width: 100%;
+      position: relative;
+    }
+    .box {
+      position: relative;
+      width: 100%;
+      height: calc(100% - 66px);
+    }
+    .box aside {
+      position: absolute;
+      width: 200px;
+      height: 100%;
+      top: 0;
+      background-color: pink;
+    }
+    aside ul {
+      padding: 0;
+      list-style: none;
+      font-size: 20px;
+      text-align: center;
+    }
+    aside ul a {
+      color: black;
+      width: 100%;
+      display: inline-block;
+      text-decoration: none;
+    }
+    aside ul a:hover {
+      color: cornflowerblue;
+      background-color: cornflowerblue;
+    }
+    .box main {
+      position: absolute;
+      width: calc(100% - 200px);
+      left: 200px;
+      height: 100%;
+      background-color: green;
+    }
+  </style>
+</head>
+<body>
+  <header>qq邮箱</header>
+  <div class="box">
+    <aside>
+      <ul>
+        <li><a href="#">邮件1</a></li>
+        <li><a href="#">邮件2</a></li>
+        <li><a href="#">邮件3</a></li>
+        <li><a href="#">邮件4</a></li>
+        <li><a href="#">邮件5</a></li>
+        <li><a href="#">邮件6</a></li>
+        <li><a href="#">邮件7</a></li>
+        <li><a href="#">邮件8</a></li>
+        <li><a href="#">邮件9</a></li>
+        <li><a href="#">邮件10</a></li>
+        <li><a href="#">邮件11</a></li>
+        <li><a href="#">邮件12</a></li>
+        <li><a href="#">邮件13</a></li>
+        <li><a href="#">邮件14</a></li>
+        <li><a href="#">邮件15</a></li>
+        <li><a href="#">邮件16</a></li>
+        <li><a href="#">邮件17</a></li>
+        <li><a href="#">邮件18</a></li>
+        <li><a href="#">邮件19</a></li>
+        <li><a href="#">邮件20</a></li>
+      </ul>
+    </aside>
+    <main></main>
+  </div>
+</body>
+</html>
