@@ -99,8 +99,12 @@
     .second {
       right: 250px;
     }
+    .third {
+      right: 0px;
+    }
     .second h2 {
       position: absolute;
+      text-align: right;
       right: 20px;
     }
     .second input {
@@ -108,14 +112,16 @@
       left:  10px;
       width: 220px;
       height: 30px;
-      top:100px;
       border-radius: 15px;
     }
+
     .third {
-      right: 0px;
+      left: calc(100% - 250px);
+      top: -300%;
     }
     .third h2 {
       position: absolute;
+      text-align: right;
       right: 20px;
     }
     .third input {
@@ -123,7 +129,6 @@
       left:  10px;
       width: 220px;
       height: 30px;
-      top:100px;
       border-radius: 15px;
     }
   </style>

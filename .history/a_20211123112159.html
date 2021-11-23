@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+  background-color: rgba(0,0,0,0.08);
+  box-shadow: inset 0 0 1px red;
+}
+html {
+  zoom: 2;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+ul ul {
+  top: 100%;
+  left: 0;
+}
+.main-menu li {
+  white-space: nowrap;
+  position: relative;
+}
+.main-menu li:hover {
+  background-color: gold;
+}
+.main-menu > li {
+  display: inline-block;
+}
+.main-menu ul {
+  display: none;
+  position: absolute;
+}
+li:hover > ul {
+  display: block;
+}
+ul ul ul {
+  left: 100%;
+  top: 0;
+}
+
+  </style>
+</head>
+<body>
+  <ul class="main-menu">
+    <li>文件
+      <ul>
+        <li>新建文件</li>
+        <li>create folder
+          <ul>
+            <li>111</li>
+            <li>222</li>
+            <li>333
+              <ul>
+                <li>111</li>
+                <li>222</li>
+                <li>333</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>aaa</li>
+      </ul>
+    </li>
+    <li>文件
+      <ul>
+        <li>新建文件</li>
+        <li>新建文件夹</li>
+        <li>aaa</li>
+      </ul>
+    </li>
+    <li>文件
+      <ul>
+        <li>新建文件</li>
+        <li>新建文件夹</li>
+        <li>aaa</li>
+      </ul>
+    </li>
+    <li>文件
+      <ul>
+        <li>新建文件</li>
+        <li>新建文件夹</li>
+        <li>aaa</li>
+      </ul>
+    </li>
+  </ul>
+</body>
+</html>

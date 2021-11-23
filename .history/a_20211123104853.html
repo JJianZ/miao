@@ -99,31 +99,36 @@
     .second {
       right: 250px;
     }
-    .second h2 {
-      position: absolute;
-      right: 20px;
-    }
-    .second input {
-      position: absolute;
-      left:  10px;
-      width: 220px;
-      height: 30px;
-      top:100px;
-      border-radius: 15px;
-    }
     .third {
       right: 0px;
     }
-    .third h2 {
-      position: absolute;
+    .second h2 {
+      position: relative;
+      text-align: right;
       right: 20px;
     }
-    .third input {
-      position: absolute;
+    .second input {
+      position: relative;
       left:  10px;
       width: 220px;
       height: 30px;
-      top:100px;
+      border-radius: 15px;
+    }
+
+    .third {
+      left: calc(100% - 250px);
+      top: -300%;
+    }
+    .third h2 {
+      position: relative;
+      text-align: right;
+      right: 20px;
+    }
+    .third input {
+      position: relative;
+      left:  10px;
+      width: 220px;
+      height: 30px;
       border-radius: 15px;
     }
   </style>

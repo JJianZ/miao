@@ -33,14 +33,24 @@
     .nav > li {
       display: inline-block;
     }
-    .nav ul {
+    .nav li ul {
+      display: none;
+      position: absolute;
+    }
+    .nav  ul{
       display: none;
       position: absolute;
     }
     li ul {
       font-size: 16px;
     }
-    li:hover > ul {
+    li:hover ul {
+      display: block;
+    }
+    li:hover ul {
+      display: block;
+    }
+    li ul li:hover ul {
       display: block;
     }
     ul ul ul {
@@ -51,7 +61,8 @@
 </head>
 <body>
   <ul class="nav">
-    <li>一级菜单
+    <li>
+      一级菜单
       <ul>
         <li>二级菜单</li>
         <li>二级菜单</li>
@@ -65,14 +76,8 @@
         <li>二级菜单</li>
       </ul>
     </li>
-    <li>一级菜单
-      <ul>
-        <li>二级菜单</li>
-        <li>二级菜单</li>
-        <li>二级菜单</li>
-        <li>二级菜单</li>
-      </ul>
-    </li>一级菜单
+    <li>
+      一级菜单
       <ul>
         <li>二级菜单</li>
         <li>二级菜单</li>
@@ -80,7 +85,17 @@
         <li>二级菜单</li>
       </ul>
     </li>
-    <li>一级菜单
+    <li>
+       一级菜单
+      <ul>
+        <li>二级菜单</li>
+        <li>二级菜单</li>
+        <li>二级菜单</li>
+        <li>二级菜单</li>
+      </ul>
+    </li>
+    <li>
+      一级菜单
       <ul>
         <li>二级菜单</li>
         <li>二级菜单</li>
