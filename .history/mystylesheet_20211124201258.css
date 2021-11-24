@@ -1,0 +1,31 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.table tr {
+  height: 35px;
+  border-top: 1px solid #dee2e6;
+}
+.table-dark {
+  background-color: #343a40;
+  color: white;
+}
+.table-dark tr {
+  height: 35px;
+  border-top: 1px solid #454d55;
+}
+.table-striped.table tbody tr:nth-child(2n+1) {
+  background-color: #f2f2f2;
+}
+.table-striped.table-dark tbody tr:nth-child(2n+1) {
+  background-color: #3e444a;
+}
+.table-hover.table table tbody tr:hover {
+  background-color: #3e444a;
+}
+.table-hover.table-dark table tbody tr:hover {
+  background-color: #3e444a;
+}
+

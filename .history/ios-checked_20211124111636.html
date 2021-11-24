@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    label {
+      position: relative;
+      width: 200px;
+      height: 100px;
+      border-radius: 50px;
+      background: #dfdfdf;
+      border: 2px solid #dfdfdf;
+      box-sizing: border-box;
+    }
+    label:checked {
+      border-color: #04be02;
+      background-color: #04be02;
+    }
+    label::before,label::after {
+      content: " ";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 90px;
+      border-radius: 45px;
+    }
+    label::before {
+      width: 45px;
+      background-color: #fdfdfd;
+    }
+  </style>
+</head>
+<body>
+  <input type="checkbox" name="" id="check">
+  <label for="check">aaaaaaaaaaaaaaaaa</label>
+</body>
+</html>

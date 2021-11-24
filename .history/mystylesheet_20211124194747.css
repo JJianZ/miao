@@ -1,0 +1,9 @@
+table {
+  width: 100%;
+  /* border-collapse: collapse; */
+  text-align: left;
+}
+table tr {
+  height: 35px;
+  border-top: 1px solid #dee2e6;
+}
