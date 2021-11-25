@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    dl {
+      width: 400px;
+    }
+    dt,dd {
+      margin: 0;
+      padding: 0;
+      /* float: left; */
+      display: inline;
+
+      font-size: 1.5em;
+    }
+    dt {
+      font-weight: 700;
+    }
+    dd {
+      padding-left: 10px;
+    }
+    dt::after {
+      content: " :";
+    }
+    dt::before {
+      content: "\0A";
+      white-space: pre;
+    }
+  </style>
+</head>
+<body>
+  <dl>
+    <dt>导演</dt>
+    <dd>刘循子墨</dd>
+    <dd>张艺谋</dd>
+    <dd>冯小刚</dd>
+    <dd>赵天宇</dd>
+
+    <dt>主演</dt>
+    <dd>尹正</dd>
+    <dd>邓家佳</dd>
+    <dd>喻恩泰</dd>
+    <dd>杨皓宇</dd>
+
+  </dl>
+</body>
+</html>

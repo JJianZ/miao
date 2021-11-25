@@ -17,7 +17,7 @@ tr,th,td {
   background-color: #343a40;
   color: white;
 }
-.table-dark thead {
+.table thead {
   border-bottom: 2px solid white;
 }
 .table-dark tr {
