@@ -39,7 +39,7 @@ tr,th,td {
 .table-borderless tr,.table-borderless th,.table-borderless td{
   border: none;
 }
-.table-sm * {
+.table-sm {
   padding: 0;
 }
 

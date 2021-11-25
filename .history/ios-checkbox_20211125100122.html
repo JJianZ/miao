@@ -30,12 +30,14 @@
       height: 96px;
       width: 96px;
       background-color: #fdfdfd;
-      transition:  1s;
+      transform: scale(1, 1);
+      transition: all 1s ease;
       border-radius: 48px;
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 
     }
     input:checked + label:before {
+      transform: scale(0);
       transform: translateX(100px);
     }
 

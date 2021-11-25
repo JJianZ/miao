@@ -25,18 +25,18 @@
     label::before {
       content: " ";
       position: absolute;
-      top: 0;
+      top: 3px;
       left: 0;
-      height: 96px;
-      width: 96px;
+      height: 90px;
+      width: 90px;
       background-color: #fdfdfd;
-      transition:  1s;
-      border-radius: 48px;
+      transition: transform .5s cubic-bezier(0.5, 1, 0.4, 1);
+      border-radius: 45px;
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 
     }
     input:checked + label:before {
-      transform: translateX(100px);
+      transform: scale(0);
     }
 
   </style>

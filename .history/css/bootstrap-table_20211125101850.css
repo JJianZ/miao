@@ -6,6 +6,9 @@ table {
 tr,th,td {
   padding: 8px;
 }
+.table thead {
+  border-bottom: 2px solid #000;
+}
 .table tr {
   height: 35px;
   border-bottom: 1px solid #dee2e6;
@@ -39,7 +42,7 @@ tr,th,td {
 .table-borderless tr,.table-borderless th,.table-borderless td{
   border: none;
 }
-.table-sm * {
+.table-sm {
   padding: 0;
 }
 

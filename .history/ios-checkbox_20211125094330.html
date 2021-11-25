@@ -22,23 +22,36 @@
       border-color: #04be02;
       background-color: #04be02;
     }
+
     label::before {
       content: " ";
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 96px;
-      width: 96px;
-      background-color: #fdfdfd;
-      transition:  1s;
-      border-radius: 48px;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
-
+     position: absolute;
+     width: 90px;
+     height: 90px;
+     border-radius: 45px;
+     border: 1px solid #DFDFDF;
+     border-radius: 16px;
+     background-color: #FFFFFF;
+     transition: transform .35s cubic-bezier(0.45, 1, 0.4, 1);
+    }
+    label::after {
+      content: " ";
+     position: absolute;
+     top: 1px;
+     left: 1px;
+     width: 70px;
+     height: 70px;
+     border-radius: 35px;
+     background-color: #FFFFFF;
+     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+     transition: transform .35s cubic-bezier(0.4, 0.4, 0.25, 1.35);
     }
     input:checked + label:before {
+      transform: scale(0);
+    }
+    input:checked + label:active {
       transform: translateX(100px);
     }
-
   </style>
 </head>
 <body>

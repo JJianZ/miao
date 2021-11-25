@@ -36,7 +36,7 @@ tr,th,td {
 .table-bordered.table-dark th,.table-bordered.table-dark td{
   border: #454d55 1px solid;
 }
-.table-borderless tr,.table-borderless th,.table-borderless td{
+.table-borderless * {
   border: none;
 }
 .table-sm * {

@@ -22,23 +22,34 @@
       border-color: #04be02;
       background-color: #04be02;
     }
-    label::before {
+    label::before,label::after {
       content: " ";
       position: absolute;
-      top: 0;
+      top: 3px;
       left: 0;
-      height: 96px;
-      width: 96px;
-      background-color: #fdfdfd;
-      transition:  1s;
-      border-radius: 48px;
+      height: 90px;
+      transition: transform 0.3s;
+            transition: -webkit-transform 0.3s;
+            transition: transform 0.3s, -webkit-transform 0.3s;
+            -webkit-transition: -webkit-transform 0.3s;
+      border-radius: 45px;
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 
     }
+    label::before {
+      width: 90px;
+      background-color: #fdfdfd;
+    }
+    label::after {
+      width: 70px;
+      background-color: white;
+    }
     input:checked + label:before {
+      transform: scale(0);
+    }
+    input:checked + label:active {
       transform: translateX(100px);
     }
-
   </style>
 </head>
 <body>

@@ -25,7 +25,7 @@
     label::before {
       content: " ";
       position: absolute;
-      top: 0;
+      top: 3px;
       left: 0;
       height: 96px;
       width: 96px;
@@ -36,7 +36,8 @@
 
     }
     input:checked + label:before {
-      transform: translateX(100px);
+      transform: scale(0);
+      transform: translateX(102px);
     }
 
   </style>
