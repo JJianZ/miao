@@ -11,7 +11,7 @@ tr,th,td {
 }
 .table tr {
   height: 35px;
-  border-top: 1px solid #dee2e6;
+  border-bottom: 1px solid #dee2e6;
 }
 .table-dark {
   background-color: #343a40;
@@ -19,7 +19,7 @@ tr,th,td {
 }
 .table-dark tr {
   height: 35px;
-  border-top: 1px solid #454d55;
+  border-bottom: 1px solid #454d55;
 }
 .table-striped.table tbody tr:nth-child(odd) {
   background-color: #f2f2f2;
