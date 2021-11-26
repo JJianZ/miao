@@ -10,20 +10,23 @@
       width: 400px;
     }
     dt,dd {
-      padding: 0;
       margin: 0;
-      float: left;
+      padding: 0;
+      display: inline;
       font-size: 1.5em;
-    }
-    dd {
-      margin-left: 10px;
     }
     dt {
       font-weight: 700;
-      clear: left;
+    }
+    dd {
+      padding-left: 10px;
     }
     dt::after {
       content: " :";
+    }
+    dt::before {
+      content: "\0A";
+      white-space: pre;
     }
   </style>
 </head>
@@ -40,7 +43,7 @@
     <dd>邓家佳</dd>
     <dd>喻恩泰</dd>
     <dd>杨皓宇</dd>
-    <dd>陈明昊</dd>
+
   </dl>
 </body>
 </html>
