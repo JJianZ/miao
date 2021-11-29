@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,body {
+  width: 100%;
+  height: 100%;
+  min-width: 1226px;
+}
+ul {
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+/* header开始 */
+header {
+  width: 100%;
+  height: 140px;
+}
+.topheader {
+  width: 100%;
+  height: 40px;
+  background-color: #333333;
+}
+.content {
+  margin:0 auto;
+  width: 1226px;
+}
+.topheader .content {
+  line-height: 40px;
+}
+.topheader .left {
+  float: left;
+}
+.topheader .right {
+  float: right;
+}
+.topheader .shopping {
+  float: right;
+}
+.topheader li {
+  position: relative;
+  float: left;
+}
+.topheader li img {
+  margin: 18px 17px 12px 17px;
+  width: 90px;
+  height: 90px;
+}
+.topheader li img + span {
+  font-size: 16px;
+  margin-left:  10px;
+}
+.topheader li:hover ul {
+  display: block;
+}
+.topheader .left ul {
+  background-color: #fff;
+  width: 134px;
+  left: -30px;
+  position: absolute;
+  display: none;
+}
+.topheader .left ul > li:nth-child(2) {
+  margin: -15px 17px;
+}
+.topheader a {
+  color: #b0b0b0;
+  font-size: 12px;
+}
+.topheader li a:hover {
+  color: white;
+}
+.shopping {
+  position: relative;
+  text-align: center;
+  width: 120px;
+  height: 40px;
+  margin-left: 10px;
+  background-color: #424242;
+}
+.shopping ul {
+  position: absolute;
+  display: none;
+  width: 320px;
+  height: 100px;
+  right: 0;
+  background-color: white;
+  line-height: 100px;
+}
+.shopping ul li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: black;
+  text-align: center;
+}
+.shopping:hover {
+  color: #ff6700;
+  background-color: #ffffff;
+}
+.shopping:hover > ul {
+  display: block;
+}
+.topheader li span {
+  color: #424242;
+  padding: 0 4px;
+}
+
+.footerheader {
+  height: 100px;
+  width: 100%;
+}
+.content {
+  line-height: 100px;
+}
+.logo {
+  float: left;
+  width: 62px;
+  margin-top:22px;
+}
+.logo img {
+  width: 56px;
+  height: 56px;
+}
+
+nav {
+  height: 100px;
+  float: left;
+}
+nav li {
+  float: left;
+  margin: 0;
+}
+nav li a {
+  margin: 0;
+  display: block;
+  font-size: 16px;
+  height: 88px;
+  padding: 0 10px 38px;
+  color: #333333;
+}
+nav li a:hover {
+  color: #ff6700;
+}
+
+.search {
+  font-size: 20px;
+  float: left;
+}
+.search input {
+  width: 225px;
+  height: 50px;
+  border: 1px solid #ccc;
+}
+.search button {
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-left: none;
+  position: absolute;
+}
+/* header结束 */

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html,body {
+      height: 100%;
+    }
+    div {
+      height: 100%;
+      overflow: hidden;
+      min-width: 330px;
+    }
+    div > * {
+      border-right: 2px solid;
+      box-shadow:0px 0px 5px rgba(0,0,0,0.7) inset;
+    }
+    aside {
+      width: 250px;
+      float: left;
+      height: 100%;
+      background-color: #eaeef3;
+      overflow: auto;
+    }
+    h2 {
+      position: relative;
+      height: 72px;
+      line-height: 72px;
+      color: #53637d;
+    }
+    ul {
+      list-style: none;
+      font-size: 20px;
+      text-align: center;
+      overflow: auto;
+    }
+    ul a {
+      color: #426dd0;
+      text-decoration: none;
+      display: inline-block;
+    }
+    ul a:hover {
+      width: 100%;
+      color: black;
+      background-color: #bbcee9;
+    }
+    aside h2 {
+      float: right;
+      margin-right: 20px;
+    }
+    .first input {
+      height: 30px;
+      width: 150px;
+      margin-left: 20px;
+      border-radius: 12px 0  0  12px;
+    }
+    .first button {
+      background-color: #4a8bf5;
+      height: 30px;
+      width: 40px;
+      margin-left: -5px;
+      vertical-align: top;
+      border-radius: 0 14px 14px 0;
+    }
+    main {
+      position: absolute;
+      height: 100%;
+      left: 250px;
+      right: 500px;
+      clear: both;
+      overflow: auto;
+     }
+    header {
+      height: 72px;
+      line-height: 70px;
+      border-bottom: black 2px solid;
+      box-shadow: none;
+    }
+   /*  header h2 {
+      margin-left: 20px;
+    }
+    main p {
+      overflow: auto;
+    } */
+    .third,.second {
+       overflow: hidden;
+       float: right;
+     }
+    /* .second h2,.third h2 {
+      text-align: right;
+      margin-right: 20px;
+
+    }
+    .second input,.third input {
+      margin-left:  10px;
+      width: 220px;
+      height: 30px;
+      border-radius: 15px;
+    } */
+  </style>
+</head>
+<body>
+  <div>
+    <aside class="first">
+      <!-- <h2>OALD Se7en</h2>
+      <input type="text" placeholder="celebration">
+      <button></button>
+      <ul>
+        <li><a href="#">word1</a></li>
+        <li><a href="#">word2</a></li>
+        <li><a href="#">word3</a></li>
+        <li><a href="#">word4</a></li>
+        <li><a href="#">word5</a></li>
+        <li><a href="#">word6</a></li>
+        <li><a href="#">word7</a></li>
+        <li><a href="#">word8</a></li>
+        <li><a href="#">word9</a></li>
+        <li><a href="#">word10</a></li>
+        <li><a href="#">word11</a></li>
+        <li><a href="#">word12</a></li>
+        <li><a href="#">word13</a></li>
+        <li><a href="#">word14</a></li>
+        <li><a href="#">word15</a></li>
+        <li><a href="#">word16</a></li>
+        <li><a href="#">word17</a></li>
+        <li><a href="#">word18</a></li>
+        <li><a href="#">word19</a></li>
+        <li><a href="#">word20</a></li>
+        <li><a href="#">word21</a></li>
+        <li><a href="#">word22</a></li>
+        <li><a href="#">word23</a></li>
+        <li><a href="#">word24</a></li>
+        <li><a href="#">word25</a></li>
+        <li><a href="#">word26</a></li>
+        <li><a href="#">word27</a></li>
+        <li><a href="#">word28</a></li>
+        <li><a href="#">word29</a></li>
+        <li><a href="#">word30</a></li>
+      </ul> -->
+    </aside>
+    <main>
+      <header>
+        <!-- <h2>fantasy</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam maiores eveniet possimus omnis error a ipsa suscipit reiciendis commodi placeat ipsam soluta iure optio, harum pariatur itaque? Reiciendis, quo suscipit.
+          Ad vel nam, ullam sequi earum qui aliquid optio ipsa magni aspernatur vero error neque! Doloremque, odio quas? Perferendis nemo maxime quia commodi. Beatae at dolorum, quibusdam veniam eum rerum.
+          Autem blanditiis ipsa numquam optio non facere architecto quod itaque tempora, et doloribus corporis adipisci voluptate id sed impedit quos quam explicabo! Voluptatum quos saepe recusandae ullam atque, odio fugit!
+          Harum ipsam repellat fugit, unde voluptates blanditiis? Dolore cumque maiores maxime reiciendis pariatur asperiores! Sunt explicabo, vel assumenda inventore ipsam, tenetur neque laboriosam non in quia amet praesentium officiis exercitationem.
+          Et sapiente iure qui id similique veritatis omnis voluptas, corrupti animi assumenda voluptate perferendis, quibusdam excepturi sit libero sint, hic autem eius officia totam vero ipsa quae culpa! Cupiditate, harum.
+          Obcaecati necessitatibus voluptate consectetur iure molestias, aliquam quidem maxime ut odio quo exercitationem sequi incidunt asperiores! Dolor quisquam, deleniti cupiditate quas aliquam similique earum veritatis amet iusto, unde distinctio sapiente?
+          Vitae, molestias! Facilis earum dolorum dignissimos. Error nulla possimus, quis autem modi minima fugit architecto molestiae sed, optio quia! Et beatae dolorum similique illo deserunt praesentium cum adipisci voluptas deleniti?
+          Voluptatibus minus porro, reprehenderit quae mollitia deserunt nostrum distinctio modi recusandae dicta, ut numquam architecto. Quis accusantium sunt magni debitis odit tenetur, architecto, animi, dolore officiis voluptas expedita mollitia natus.
+          Cumque aspernatur voluptatum aperiam. Eos et rem nobis numquam molestias quod, repellat illo neque laudantium dignissimos hic at ea natus dolores sunt ad obcaecati aliquid veritatis vel id ducimus voluptate.
+          Officiis exercitationem quod, repellat minus perspiciatis sed saepe ea impedit eveniet! Amet aut ratione odit, dolore tempore nulla aspernatur eaque dolorum aliquam illum debitis voluptatibus nobis libero laudantium consequuntur deleniti?
+        </p> -->
+      </header>
+    </main>
+    <aside class="second">
+      <!-- <h2>Vocabulary</h2>
+      <input type="text" placeholder="Search Vocabulary"> -->
+    </aside>
+    <aside class="third">
+      <!-- <h2>History</h2>
+      <input type="text" placeholder="Search History"> -->
+    </aside>
+  </div>
+</body>
+</html>
