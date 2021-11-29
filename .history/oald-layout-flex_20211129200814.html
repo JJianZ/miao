@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    html,body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+    div {
+      display: flex;
+      height: 100%;
+    }
+    div > * {
+      box-shadow:0px 0px 5px rgba(0,0,0,0.7) inset;
+      border-right: black 2px solid;
+      box-sizing: border-box;
+    }
+    aside {
+      width: 250px;
+      height: 100%;
+      overflow: auto;
+    }
+    h2 {
+      height: 72px;
+      color: #53637d;
+      position: relative;
+    }
+    .first h2 {
+      text-align: center;
+    }
+    .first input {
+      float: left;
+      height: 25px;
+      width: 150px;
+      margin-left: 20px;
+      border-radius: 12px 0  0  12px;
+    }
+    .first button {
+      float: left;
+      background-color: #4a8bf5;
+      height: 32px;
+      width: 40px;
+      margin-top: -10px;
+      margin-left: 178px;
+      border-radius: 0 14px 14px 0;
+    }
+    .first ul {
+      padding: 0;
+      list-style: none;
+      font-size: 20px;
+      text-align: center;
+    }
+    .first ul a {
+      color: #426dd0;
+      text-decoration: none;
+      display: block;
+      padding: 10px 0;
+    }
+    .first ul a:hover {
+      width: 100%;
+      color: black;
+      background-color: #bbcee9;
+    }
+    main {
+      flex: 1;
+    }
+    header {
+      height: 72px;
+      border-bottom: 2px solid #000;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <aside class="first">
+      <h2>OALD Se7en</h2>
+      <input type="text" placeholder="celebration">
+      <button></button>
+      <ul>
+        <li><a href="#">word1</a></li>
+        <li><a href="#">word2</a></li>
+        <li><a href="#">word3</a></li>
+        <li><a href="#">word4</a></li>
+        <li><a href="#">word5</a></li>
+        <li><a href="#">word6</a></li>
+        <li><a href="#">word7</a></li>
+        <li><a href="#">word8</a></li>
+        <li><a href="#">word9</a></li>
+        <li><a href="#">word10</a></li>
+        <li><a href="#">word11</a></li>
+        <li><a href="#">word12</a></li>
+        <li><a href="#">word13</a></li>
+        <li><a href="#">word14</a></li>
+        <li><a href="#">word15</a></li>
+        <li><a href="#">word16</a></li>
+        <li><a href="#">word17</a></li>
+        <li><a href="#">word18</a></li>
+        <li><a href="#">word19</a></li>
+        <li><a href="#">word20</a></li>
+        <li><a href="#">word21</a></li>
+        <li><a href="#">word22</a></li>
+        <li><a href="#">word23</a></li>
+        <li><a href="#">word24</a></li>
+        <li><a href="#">word25</a></li>
+        <li><a href="#">word26</a></li>
+        <li><a href="#">word27</a></li>
+        <li><a href="#">word28</a></li>
+        <li><a href="#">word29</a></li>
+        <li><a href="#">word30</a></li>
+      </ul>
+    </aside>
+    <main>
+      <header>
+        <h2>fantasy</h2>
+      </header>
+      <div class="content"></div>
+    </main>
+    <aside class="second"></aside>
+    <aside class="third"></aside>
+  </div>
+</body>
+</html>

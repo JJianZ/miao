@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    html,body {
+      height: 100%;
+    }
+    div {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      height: 100%;
+      justify-content: center;
+    }
+    header {
+      width: 100%;
+      height: 66px;
+      background-color: pink;
+    }
+    aside {
+      width: 250px;
+      background-color: plum;
+      height: calc(100% - 66px);
+      overflow: auto;
+    }
+    aside ul {
+      padding: 0;
+      list-style: none;
+      font-size: 20px;
+      text-align: center;
+    }
+    aside ul a {
+      padding: 20px 0;
+      color: black;
+      width: 100%;
+      display: inline-block;
+      text-decoration: none;
+    }
+    aside ul a:hover {
+      color: white;
+      background-color: cornflowerblue;
+    }
+    main {
+      flex-grow: 1;
+      background-color: green;
+      height: calc(100% - 66px);
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <header>
+      <h2>QQ邮箱</h2>
+    </header>
+    <aside>
+      <ul>
+        <li><a href="#">邮件1</a></li>
+        <li><a href="#">邮件2</a></li>
+        <li><a href="#">邮件3</a></li>
+        <li><a href="#">邮件4</a></li>
+        <li><a href="#">邮件5</a></li>
+        <li><a href="#">邮件6</a></li>
+        <li><a href="#">邮件7</a></li>
+        <li><a href="#">邮件8</a></li>
+        <li><a href="#">邮件9</a></li>
+        <li><a href="#">邮件10</a></li>
+        <li><a href="#">邮件11</a></li>
+        <li><a href="#">邮件12</a></li>
+        <li><a href="#">邮件13</a></li>
+        <li><a href="#">邮件14</a></li>
+        <li><a href="#">邮件15</a></li>
+        <li><a href="#">邮件16</a></li>
+        <li><a href="#">邮件17</a></li>
+        <li><a href="#">邮件18</a></li>
+        <li><a href="#">邮件19</a></li>
+        <li><a href="#">邮件20</a></li>
+      </ul>
+    </aside>
+    <main>
+      <p>
+
+        Ea facere rerum doloremque esse voluptatem impedit deserunt eum vero quasi? Iusto tenetur nihil debitis cumque assumenda, quam pariatur enim odit, reiciendis vitae qui. Corporis molestiae architecto eum nisi quibusdam?
+      </p>
+    </main>
+  </div>
+</body>
+</html>
