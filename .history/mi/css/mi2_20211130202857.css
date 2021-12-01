@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,body {
+  width: 100%;
+  height: 100%;
+  min-width: 1226px;
+}
+.w {
+  width: 1226px;
+  margin: 0 auto;
+}
+ul {
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+/* 头部开始 */
+.header {
+  width: 100%;
+  height: 140px;
+  background-color: pink;
+}
+.topbar {
+  height: 40px;
+  background-color: #333333;
+}
+.content {
+  height: 40px;
+}
+.content .left {
+  display: flex;
+  font-size: 12px;
+  color: #b0b0b0;
+  gap: 20px;
+  line-height: 40px;
+}
+.content .left li:first-child {
+  gap:0;
+}
+.content .left li a {
+  color: #b0b0b0;
+}
+.content .left li::before {
+  content: "";
+  width: 1px;
+  height: 48px;
+}
+.content .left li a:hover {
+  color: white;
+}
+/* 头部结束 */
+
