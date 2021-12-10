@@ -809,22 +809,18 @@ main {
             &:hover {
               transform: translateY(-2px);
               box-shadow: 0 1px 5px rgba(0, 0, 0, .2);
-              .iconfont {
-                background-color: #ff6700;
-                border-color: #ff6700;
-              }
             }
             .iconfont {
               position: absolute;
-              bottom: 120px;
-              left: 25px;
-              // width: 62px;
-              // height: 40px;
-              border-radius: 30px;
+              bottom: 20px;
+              left: 40px;
+              width: 32px;
+              height: 20px;
+              border-radius: 15px;
               color: white;
               border: 2px solid white;
               background-color: #3b4b59;
-              font-size: 30px;
+              font-size: 24px;
               line-height: 20px;
             }
             img {
@@ -850,10 +846,7 @@ main {
             }
           }
           input {
-            &:nth-child(1):checked ~ .video,
-            &:nth-child(2):checked ~ .video,
-            &:nth-child(3):checked ~ .video,
-            &:nth-child(4):checked ~ .video {
+            &:checked ~ .video {
               opacity: 1;
             }
           }
@@ -896,12 +889,16 @@ main {
                   color: white;
                   border-radius: 999px;
                 }
+                &:active {
+                  .video {
+                    opacity: 0;
+                  }
+                }
               }
             }
             video {
               display: block;
               width: 100%;
-
             }
           }
         }

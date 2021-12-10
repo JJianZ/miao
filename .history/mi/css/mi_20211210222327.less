@@ -850,10 +850,10 @@ main {
             }
           }
           input {
-            &:nth-child(1):checked ~ .video,
-            &:nth-child(2):checked ~ .video,
-            &:nth-child(3):checked ~ .video,
-            &:nth-child(4):checked ~ .video {
+            &:nth-child(1) + .video:nth-child(1),
+            &:nth-child(2) + .video:nth-child(2),
+            &:nth-child(3) + .video:nth-child(3),
+            &:nth-child(4) + .video:nth-child(4) {
               opacity: 1;
             }
           }
@@ -895,6 +895,11 @@ main {
                   font-weight: 700;
                   color: white;
                   border-radius: 999px;
+                }
+                &:active {
+                  .video {
+                    opacity: 0;
+                  }
                 }
               }
             }

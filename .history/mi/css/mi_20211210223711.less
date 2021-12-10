@@ -896,6 +896,11 @@ main {
                   color: white;
                   border-radius: 999px;
                 }
+                &:active {
+                  ~ .video {
+                    opacity: 0;
+                  }
+                }
               }
             }
             video {

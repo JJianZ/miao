@@ -742,18 +742,111 @@ main .brick-box .box-bd .box-row .tab-list span:hover .right {
   visibility: visible;
   transition: none;
 }
-main .brick-box .box-bd .box-row .video {
-  display: flex;
-  gap: 14px;
+main .brick-box .box-bd .box-row .video-img {
+  cursor: pointer;
 }
-main .brick-box .box-bd .box-row .video li {
+main .brick-box .box-bd .box-row .video-img .video-button {
+  position: relative;
   width: 296px;
   height: 285px;
   background-color: #fff;
   text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  transition: 0.3s;
+  transform: translateY(0);
 }
-main .brick-box .box-bd .box-row .video li img {
+main .brick-box .box-bd .box-row .video-img .video-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+main .brick-box .box-bd .box-row .video-img .video-button:hover .iconfont {
+  background-color: #ff6700;
+  border-color: #ff6700;
+}
+main .brick-box .box-bd .box-row .video-img .video-button .iconfont {
+  position: absolute;
+  bottom: 120px;
+  left: 25px;
+  border-radius: 30px;
+  color: white;
+  border: 2px solid white;
+  background-color: #3b4b59;
+  font-size: 30px;
+  line-height: 20px;
+}
+main .brick-box .box-bd .box-row .video-img .video-button img {
+  width: 100%;
+  height: 177px;
   margin-bottom: 20px;
+}
+main .brick-box .box-bd .box-row .video-img .video-button .title {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 14px;
+  margin: 0 10px;
+  font-weight: 400;
+}
+main .brick-box .box-bd .box-row .video-img .video-button .desc {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0 10px 10px;
+  font-size: 12px;
+  color: #b0b0b0;
+}
+main .brick-box .box-bd .box-row .video-img input:nth-child(1):checked ~ .video,
+main .brick-box .box-bd .box-row .video-img input:nth-child(2):checked ~ .video,
+main .brick-box .box-bd .box-row .video-img input:nth-child(3):checked ~ .video,
+main .brick-box .box-bd .box-row .video-img input:nth-child(4):checked ~ .video {
+  opacity: 1;
+}
+main .brick-box .box-bd .box-row .video-img .video {
+  z-index: 99999;
+  opacity: 0;
+  width: 880px;
+  height: 495px;
+  position: fixed;
+  left: calc(50% - 440px);
+  right: 0;
+  bottom: 160px;
+  top: 160px;
+  transition: 0.2s;
+}
+main .brick-box .box-bd .box-row .video-img .video .video-header {
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+}
+main .brick-box .box-bd .box-row .video-img .video .video-header p {
+  float: left;
+  font-size: 18px;
+  font-weight: 400;
+  color: #424242;
+  line-height: 60px;
+  margin-left: 20px;
+}
+main .brick-box .box-bd .box-row .video-img .video .video-header .iconfont {
+  cursor: pointer;
+  margin-top: 10px;
+  width: 40px;
+  height: 40px;
+  float: right;
+  margin-right: 20px;
+  font-size: 24px;
+  text-align: center;
+  line-height: 40px;
+}
+main .brick-box .box-bd .box-row .video-img .video .video-header .iconfont:hover {
+  background-color: #e53935;
+  font-weight: 700;
+  color: white;
+  border-radius: 999px;
+}
+main .brick-box .box-bd .box-row .video-img .video video {
+  display: block;
+  width: 100%;
 }
 .site-footer {
   height: 332px;

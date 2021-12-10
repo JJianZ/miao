@@ -810,6 +810,7 @@ main {
               transform: translateY(-2px);
               box-shadow: 0 1px 5px rgba(0, 0, 0, .2);
               .iconfont {
+                color: #ff6700;
                 background-color: #ff6700;
                 border-color: #ff6700;
               }
@@ -850,10 +851,7 @@ main {
             }
           }
           input {
-            &:nth-child(1):checked ~ .video,
-            &:nth-child(2):checked ~ .video,
-            &:nth-child(3):checked ~ .video,
-            &:nth-child(4):checked ~ .video {
+            &:checked ~ .video {
               opacity: 1;
             }
           }
@@ -896,12 +894,16 @@ main {
                   color: white;
                   border-radius: 999px;
                 }
+                &:active {
+                  .video {
+                    opacity: 0;
+                  }
+                }
               }
             }
             video {
               display: block;
               width: 100%;
-
             }
           }
         }
