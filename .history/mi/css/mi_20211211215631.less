@@ -799,6 +799,7 @@ main {
           }
         }
 
+
         .video-img {
           // cursor: pointer;
           .video-button {
@@ -818,6 +819,14 @@ main {
               .iconfont {
                 background-color: #ff6700;
                 border-color: #ff6700;
+              }
+            }
+            input {
+              &:nth-child(1):checked ~ .video,
+              &:nth-child(2):checked ~ .video,
+              &:nth-child(3):checked ~ .video,
+              &:nth-child(4):checked ~ .video{
+                opacity: 1;
               }
             }
             .iconfont {
@@ -853,14 +862,6 @@ main {
               margin: 0 10px 10px;
               font-size: 12px;
               color: #b0b0b0;
-            }
-          }
-          input {
-            &:nth-child(1):checked ~ .video,
-            &:nth-child(2):checked ~ .video,
-            &:nth-child(3):checked ~ .video,
-            &:nth-child(4):checked ~ .video {
-              opacity: 1;
             }
           }
           .video {
@@ -902,6 +903,7 @@ main {
             video {
               display: block;
               width: 100%;
+
             }
           }
         }

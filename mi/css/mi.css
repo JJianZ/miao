@@ -690,12 +690,13 @@ main .brick-box .box-bd .box-row .right .brick-list .last-li .last-list .last-it
   margin-top: 6px;
   margin-left: 20px;
 }
-main .brick-box .box-bd .box-row .right .brick-list .last-li .last-list .last-item span {
+main .brick-box .box-bd .box-row .right .brick-list .last-li .last-list .last-item .iconfont {
   font-size: 70px;
   position: absolute;
   top: 66px;
   right: 35px;
   color: #ff6700;
+  border: none;
 }
 main .brick-box .box-bd .box-row .tab-list {
   float: right;
@@ -708,6 +709,7 @@ main .brick-box .box-bd .box-row .tab-list {
 }
 main .brick-box .box-bd .box-row .tab-list span:first-child {
   color: #ff6700;
+  border-bottom: 2px solid #ff6700;
 }
 main .brick-box .box-bd .box-row .tab-list span:first-child .right {
   visibility: visible;
@@ -715,6 +717,7 @@ main .brick-box .box-bd .box-row .tab-list span:first-child .right {
 main .brick-box .box-bd .box-row .tab-list:hover span {
   color: #333;
   transition: none;
+  border-bottom: none;
 }
 main .brick-box .box-bd .box-row .tab-list:hover span .right {
   visibility: hidden;
@@ -723,7 +726,8 @@ main .brick-box .box-bd .box-row .tab-list:hover span .right {
 main .brick-box .box-bd .box-row .tab-list span {
   float: right;
   margin-top: -40px;
-  transition: 0 3s;
+  transition: 0s 3s;
+  height: 30px;
 }
 main .brick-box .box-bd .box-row .tab-list span .right {
   position: absolute;
@@ -732,18 +736,16 @@ main .brick-box .box-bd .box-row .tab-list span .right {
   right: 0;
   bottom: 0;
   visibility: hidden;
-  transition: 0 3s;
+  transition: 0s 3s;
 }
 main .brick-box .box-bd .box-row .tab-list span:hover {
   color: #ff6700;
   transition: none;
+  border-bottom: 2px solid #ff6700;
 }
 main .brick-box .box-bd .box-row .tab-list span:hover .right {
   visibility: visible;
   transition: none;
-}
-main .brick-box .box-bd .box-row .video-img {
-  cursor: pointer;
 }
 main .brick-box .box-bd .box-row .video-img .video-button {
   position: relative;
@@ -806,20 +808,15 @@ main .brick-box .box-bd .box-row .video-img .video {
   z-index: 99999;
   opacity: 0;
   width: 880px;
-  height: 495px;
   position: fixed;
   left: calc(50% - 440px);
   right: 0;
   bottom: 160px;
   top: 160px;
-  transition: 0.2s;
-}
-main .brick-box .box-bd .box-row .video-img .video .video-header {
-  width: 100%;
-  height: 60px;
+  transition: 0.5s;
   background-color: #fff;
 }
-main .brick-box .box-bd .box-row .video-img .video .video-header p {
+main .brick-box .box-bd .box-row .video-img .video p {
   float: left;
   font-size: 18px;
   font-weight: 400;
@@ -827,7 +824,7 @@ main .brick-box .box-bd .box-row .video-img .video .video-header p {
   line-height: 60px;
   margin-left: 20px;
 }
-main .brick-box .box-bd .box-row .video-img .video .video-header .iconfont {
+main .brick-box .box-bd .box-row .video-img .video .iconfont {
   cursor: pointer;
   margin-top: 10px;
   width: 40px;
@@ -838,7 +835,7 @@ main .brick-box .box-bd .box-row .video-img .video .video-header .iconfont {
   text-align: center;
   line-height: 40px;
 }
-main .brick-box .box-bd .box-row .video-img .video .video-header .iconfont:hover {
+main .brick-box .box-bd .box-row .video-img .video .iconfont:hover {
   background-color: #e53935;
   font-weight: 700;
   color: white;
@@ -1137,4 +1134,83 @@ main .brick-box .box-bd .box-row .video-img .video video {
 }
 .tool-bar .backtop {
   margin-top: 20px;
+}
+@media (max-width: 1400px) {
+  .tool-bar {
+    position: fixed;
+    bottom: 70px;
+    left: calc(50% + 613px);
+    z-index: 2000;
+  }
+  .tool-bar .item {
+    position: relative;
+    display: block;
+    width: 27px;
+    height: 42px;
+    background-color: #fff;
+    border: 1px solid #f5f5f5;
+    text-align: center;
+  }
+  .tool-bar .item .icon {
+    position: relative;
+    width: 20px;
+    height: 30px;
+    padding-top: 10px;
+  }
+  .tool-bar .item .icon img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 20px;
+  }
+  .tool-bar .item .icon .static {
+    opacity: 1;
+  }
+  .tool-bar .item .icon .hover {
+    opacity: 0;
+  }
+  .tool-bar .item:hover .static {
+    opacity: 0;
+  }
+  .tool-bar .item:hover .hover {
+    opacity: 1;
+  }
+  .tool-bar .item:hover .text {
+    color: #ff6700;
+  }
+  .tool-bar .item:hover .pop-content {
+    opacity: 1;
+  }
+  .tool-bar .item .pop-content {
+    opacity: 0;
+    width: 130px;
+    height: 192px;
+    position: absolute;
+    top: 0;
+    right: 30px;
+    padding: 14px;
+    background-color: #fff;
+    border: 1px solid #f5f5f5;
+    text-align: center;
+    transition: 0.5s;
+  }
+  .tool-bar .item .pop-content img {
+    width: 100px;
+    height: 100px;
+  }
+  .tool-bar .item .pop-content .desc {
+    width: 82px;
+    margin: 14px auto 0;
+    color: #757575;
+    text-align: center;
+    font-size: 14px;
+  }
+  .tool-bar .item .text {
+    display: none;
+    color: #757575;
+    font-size: 14px;
+  }
+  .tool-bar .backtop {
+    margin-top: 20px;
+  }
 }
