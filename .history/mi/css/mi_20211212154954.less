@@ -196,7 +196,7 @@ header {
                   z-index: 100;
                   background-color: #fff;
                   box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
-                  transition:height .2s .5s,z-index 1s;
+                  transition:height .2s .5s,z-index .5s;
                     ul {
                       width: 1226px;
                       display: flex;
@@ -674,7 +674,6 @@ main {
         .right {
           width: 978px;
           height: 628px;
-          // transition: 0s 3s;
           .brick-list {
             display: flex;
             flex-flow: wrap;
@@ -740,7 +739,6 @@ main {
                     right: 35px;
                     color: #ff6700;
                     border: none;
-                    transition: none;
                   }
                 }
               }
@@ -762,6 +760,9 @@ main {
             border-bottom: 2px solid #ff6700;
             .right {
               visibility: visible;
+              .last-li {
+                visibility: visible;
+              }
             }
           }
           &:hover span {
@@ -771,6 +772,10 @@ main {
             .right {
               visibility: hidden;
               transition: none;
+              .list-li {
+                visibility: hidden;
+                transition: none;
+              }
             }
           }
           span {
@@ -796,6 +801,10 @@ main {
               .right {
                 visibility: visible;
                 transition: none;
+                .last-li {
+                  visibility: visible;
+                  transition: none;
+                }
               }
             }
           }

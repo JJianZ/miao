@@ -185,7 +185,7 @@ header .site-header .container .header-nav .navmainlist li .list {
   z-index: 100;
   background-color: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: height 0.2s 0.5s, z-index 0.5s;
+  transition: height 0.2s 0.5s, z-index 1s;
 }
 header .site-header .container .header-nav .navmainlist li .list ul {
   width: 1226px;
@@ -649,6 +649,7 @@ main .brick-box .box-bd .box-row .right .brick-list li img {
 main .brick-box .box-bd .box-row .right .brick-list .last-li {
   background-color: transparent;
   box-shadow: none;
+  transition: none;
 }
 main .brick-box .box-bd .box-row .right .brick-list .last-li:hover {
   transform: none;
@@ -697,6 +698,7 @@ main .brick-box .box-bd .box-row .right .brick-list .last-li .last-list .last-it
   right: 35px;
   color: #ff6700;
   border: none;
+  transition: none;
 }
 main .brick-box .box-bd .box-row .tab-list {
   float: right;
@@ -802,11 +804,11 @@ main .brick-box .box-bd .box-row .video-img input:nth-child(1):checked ~ .video,
 main .brick-box .box-bd .box-row .video-img input:nth-child(2):checked ~ .video,
 main .brick-box .box-bd .box-row .video-img input:nth-child(3):checked ~ .video,
 main .brick-box .box-bd .box-row .video-img input:nth-child(4):checked ~ .video {
-  opacity: 1;
+  display: block;
 }
 main .brick-box .box-bd .box-row .video-img .video {
   z-index: 99999;
-  opacity: 0;
+  display: none;
   width: 880px;
   position: fixed;
   left: calc(50% - 440px);
