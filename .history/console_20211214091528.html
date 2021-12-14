@@ -7,7 +7,7 @@
   <title>Document</title>
 </head>
 <body>
-  <!-- <script>
+  <script>
     x = 2021
     console.log (x) // 输出x
     console.log (x * 2) // 输出x的两倍
@@ -19,12 +19,11 @@
     console.log (x % 10)// 输出x的个位数
     console.log (x % 100)// 输出x百位数以下的部分，对于2021，即输出21，对于2035，即输出35
     console.log (x > 200 && x % 3 == 0 && x % 7 != 0)// 输出x是否大于200且为3的倍数但不是7的倍数。
-    console.log ((x - (x % 100)) / 100 + 1)// 输出x做为年份时，所在的世纪，对于2021即输出21，对于1864即输出19
-    console.log (x % 4 == 0 && x % 100 !== 0 || x % 400 == 0)// 输出x做为年份时，是否为闰年，是输出true，不是输出false
-    console.log((x == 2 || x == 3 || x == 5 || x == 7) || (x !== 1 && x % 2 !== 0 && x % 3 !== 0 && x % 5 !== 0 && x % 7 !== 0)  ) // 输出x是否为素数（此时x范围为100以内）
-  </script> -->
+    console.log (parseInt(x / 100 + 1))// 输出x做为年份时，所在的世纪，对于2021即输出21，对于1864即输出19
+    console.log (x % 4 == 0 && x % 100 != 0 || x % 400 == 0)// 输出x做为年份时，是否为闰年，是输出true，不是输出false
+  </script>
 
-  <!-- <script>
+  <script>
     for (var i = 2;i <= 100;i++){
       var b = true
       for (var j = 2; j<i;j++) {
@@ -37,20 +36,6 @@
         console.log (i)
       }
     }
-  </script> -->
-  <script>
-    var a = 3
-    var b = 4
-    var c = 5
-    var d = 6
-    var e = 7
-    var f = 8
-
-    var x = (c * d - f * a) / (a * e - b * d)
-    var y = (c * e - f * b) / (a * e - b * d)
-    console.log (x)
-    console.log (y)
-
   </script>
 </body>
 </html>
