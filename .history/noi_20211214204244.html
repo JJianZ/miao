@@ -367,39 +367,16 @@
     }
   </script>
 
-  <script type="xxx" id="ch0104/19">
+  <script xtype="xxx" id="ch0104/19">
     var x1 = parseInt(prompt('x1:'))
     var x2 = parseInt(prompt('x2:'))
     var c = prompt('操作符:')
-    if (c == '+') {
-      console.log(x1 + x2)
+    if (x >= -1 && x <= 1 && y >= -1 && y <= 1) {
+      console.log('yes')
     }
-    else if (c == '-') {
-      console.log(x1 - x2)
+    else {
+      console.log('no')
     }
-    else if (c == '*') {
-      console.log(x1 * x2)
-    }
-    else if (c == '/') {
-      console.log(x1 / x2)
-    }
-  </script>
-
-  <!-- <script type="xxx" id="ch0104/20">
-    var a = Number(prompt('a:'))
-    var b = Number(prompt('b:'))
-    var c = Number(prompt('c:'))
-    var x1 = Number((-b + Math.sqrt(b * b - 4 * a * c))/ (2 * a))
-    var x2 = Number((-b - Math.sqrt(b * b - 4 * a * c))/ (2 * a))
-
-  </script> -->
-
-  <script xtype="xxx" id="ch0104/21">
-    var n = Number(prompt('n:'))
-    var x = Number(prompt('x:'))
-    var y = Number(prompt('y:'))
-    console.log (Number(n - Math.ceil(y / x)))
-
   </script>
 </body>
 </html>

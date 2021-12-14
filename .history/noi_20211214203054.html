@@ -307,7 +307,7 @@
     }
   </script>
 
-  <script type="xxx" id="ch0104/14">
+  <script xtype="xxx" id="ch0104/14">
     var x = Number(prompt('x:'))
     var y = prompt('y:')
 
@@ -318,88 +318,11 @@
       console.log (Number(8 + 5))
     }
     else if (x > 1000 && y == 'y') {
-      console.log ((Math.ceil((x - 1000) / 500) * 4 + 8 + 5))
+      console.log (Number(((x - 1000) / 500 + 1) * 4 + 8 + 5))
     }
     else if (x > 1000 && y != 'y') {
       console.log ((Math.ceil((x - 1000) / 500) * 4 + 8))
     }
-  </script>
-
-  <script type="xxx" id="ch0104/15">
-    var x1 = Number(prompt('x1:'))
-    var x2 = Number(prompt('x2:'))
-    var x3 = Number(prompt('x3:'))
-    console.log(Math.max(x1,x2,x3))
-  </script>
-
-  <script type="xxx" id="ch0104/16">
-    var x1 = parseInt(prompt('x1:'))
-    var x2 = parseInt(prompt('x2:'))
-    var x3 = parseInt(prompt('x3:'))
-    if (x1 + x2 > x3 || x1 + x3 > x2 || x3 + x2 > x1) {
-      console.log('yes')
-    }
-    else {
-      console.log('no')
-    }
-  </script>
-
-  <script type="xxx" id="ch0104/17">
-    var x = parseInt(prompt('x:'))
-
-    if (x % 4 == 0 && x % 100 != 0 || x % 400 == 0) {
-      console.log('Y')
-    }
-    else {
-      console.log('N')
-    }
-  </script>
-
-  <script type="xxx" id="ch0104/18">
-    var x = parseInt(prompt('x:'))
-    var y = parseInt(prompt('y:'))
-
-    if (x >= -1 && x <= 1 && y >= -1 && y <= 1) {
-      console.log('yes')
-    }
-    else {
-      console.log('no')
-    }
-  </script>
-
-  <script type="xxx" id="ch0104/19">
-    var x1 = parseInt(prompt('x1:'))
-    var x2 = parseInt(prompt('x2:'))
-    var c = prompt('操作符:')
-    if (c == '+') {
-      console.log(x1 + x2)
-    }
-    else if (c == '-') {
-      console.log(x1 - x2)
-    }
-    else if (c == '*') {
-      console.log(x1 * x2)
-    }
-    else if (c == '/') {
-      console.log(x1 / x2)
-    }
-  </script>
-
-  <!-- <script type="xxx" id="ch0104/20">
-    var a = Number(prompt('a:'))
-    var b = Number(prompt('b:'))
-    var c = Number(prompt('c:'))
-    var x1 = Number((-b + Math.sqrt(b * b - 4 * a * c))/ (2 * a))
-    var x2 = Number((-b - Math.sqrt(b * b - 4 * a * c))/ (2 * a))
-
-  </script> -->
-
-  <script xtype="xxx" id="ch0104/21">
-    var n = Number(prompt('n:'))
-    var x = Number(prompt('x:'))
-    var y = Number(prompt('y:'))
-    console.log (Number(n - Math.ceil(y / x)))
-
   </script>
 </body>
 </html>
