@@ -305,8 +305,8 @@
     }
   </script>
 
-  <script xtype="xxx" id="ch0104/12">
-    var x = parseInt(prompt('x:'))
+  <script type="xxx" id="ch0104/12">
+    var x = Number(prompt('x:'))
     var a = Number((x / 3) + 27 + 23)
     var b = Number(x / 1.2)
     if (a < b) {
@@ -419,16 +419,10 @@
     var b = Number(prompt('b:'))
     var c = Number(prompt('c:'))
     var m = Number((-1 * b + Math.sqrt(b * b - 4 * a * c))/ (2 * a))
-    var n = Number((-1 * b - Math.sqrt(b * b - 4 * a * c))/ (2 * a))
+    var m = Number((-1 * b - Math.sqrt(b * b - 4 * a * c))/ (2 * a))
     m
     if (b * b - 4 * a * c >= 0) {
-      if (b * b == 4 * a * c) {
-        m == n
-        console.log()
-      }
-    }
-    else {
-      console.log('无解')
+
     }
   </script>
 
