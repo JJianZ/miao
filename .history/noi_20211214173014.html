@@ -140,7 +140,7 @@
     var c = Math.sqrt(Number(((x2 - x3) ** 2) + ((y2 - y3) ** 2)))
     var p = Number(a + b + c) / 2
     // var h = Math.sqrt(Number(((4 * a ** 2 * b ** 2) - ((a ** 2 - c ** 2 + b** 2) ** 2)) / (2 * a)))
-    var S = Math.sqrt(p * ((p - a) * (p - b) * (p - c)))
+    var S = Math.sqrt((p - a) * p) + ((p - b) * p) + ((p - b) * p)
     console.log (S.toFixed(2))
   </script>
 
@@ -160,7 +160,7 @@
   </script>
 
   <script type="xxx" id="ch0103/20">
-    var n = Math.abs(parseInt(prompt ('n:')))
+    var n = parseInt(prompt ('n:'))
     console.log(2 ** n)
   </script>
 </body>
