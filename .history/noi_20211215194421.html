@@ -511,11 +511,11 @@
     console.log(s)
   </script>
 
-  <script type="xxx" id="ch0105/07">
+  <script xtype="xxx" id="ch0105/07">
     var n = parseInt(prompt('n:'))
-    var s1 = 0
-    var s2 = 0
-    var s3 = 0
+    let s1 = 0
+    let s2 = 0
+    let s3 = 0
     var s4 = 0
     for (var i = 0;i < 3 * n;i++) {
       if (i % 3 == 0) {
@@ -532,88 +532,5 @@
     }
     console.log(s1,s2,s3,s4)
   </script>
-
-  <script type="xxx" id="ch0105/08">
-    var n = parseInt(prompt('n:'))
-    var s = 0
-    for (var i = 1;i < n;i++) {
-      var deg = parseInt(prompt('deg:'))
-      s = s + deg
-    }
-    var a = (n - 2) * 180 - s
-    console.log(a)
-  </script>
-
-  <script type="xxx" id="ch0105/09">
-    var m = parseInt(prompt('m:'))
-    var n = parseInt(prompt('n:'))
-    var s = 0
-    for (var i = m;i <= n;i++) {
-      if (i % 2 == 1) {
-        s = s + i
-      }
-    }
-    console.log(s)
-  </script>
-
-  <script type="xxx" id="ch0105/10">
-    var m = parseInt(prompt('m:'))
-    var n = parseInt(prompt('n:'))
-    var s = 0
-    for (var i = m;i <= n;i++) {
-      if (i % 17 == 0) {
-        s = s + i
-      }
-    }
-    console.log(s)
-  </script>
-
-  <script type="xxx" id="ch0105/11">
-    var k = parseInt(prompt('k:'))
-    var s1 = 0
-    var s5 = 0
-    var s10 = 0
-    for (var i = 1;i <= k;i++) {
-      var v = parseInt(prompt('v:'))
-      if (v == 1) {
-        s1 = s1 + 1
-      } else if (v == 5) {
-        s5 = s5 + 1
-      } else if (v == 10) {
-        s10 = s10 + 1
-      }
-    }
-    console.log(s1)
-    console.log(s5)
-    console.log(s10)
-
-  </script>
-
-  <script type="xxx" id="ch0105/12">
-    var N = parseInt(prompt('N:'))
-    var m = parseInt(prompt('m:'))
-    var s = 0
-    for (var i = 1;i <= N;i++) {
-      var a = parseInt(prompt('a:'))
-      if (a == m) {
-        s = s + 1
-      }
-    }
-    console.log(s)
-  </script>
-
-  <script type="xxx" id="ch0105/13">
-    var a = parseInt(prompt('a:'))
-    var n = parseInt(prompt('n:'))
-    var s = Math.pow(a,n)
-    console.log(s)
-  </script>
-
-  <!-- <script xtype="xxx" id="ch0105/14">
-    var x = parseInt(prompt('x:'))
-    var n = parseInt(prompt('n:'))
-    var s = Math.pow(a,n)
-    console.log(s)
-  </script> -->
 </body>
 </html>
