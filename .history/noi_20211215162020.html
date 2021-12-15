@@ -477,25 +477,14 @@
     console.log((s / n).toFixed(4))
   </script>
 
-  <script type="xxx" id="ch0105/04">
+  <script xtype="xxx" id="ch0105/04">
     var n = parseInt(prompt('n:'))
     var s = 0
     for (var i = 1;i <= n;i++) {
       var a = Number(prompt('a:'))
       var s = s + a
     }
-    console.log(s,(s / n).toFixed(5))
-  </script>
-
-  <script type="xxx" id="ch0105/05">
-    var n = parseInt(prompt('n:'))
-    var s = 0
-    a = []
-    for (var i = 1;i <= n;i++) {
-      a.push(prompt('a:'))
-      var s = Math.max(...a)
-    }
-    console.log(s)
+    console.log(s + (s / n).toFixed(5))
   </script>
 </body>
 </html>

@@ -310,17 +310,16 @@
     }
   </script>
 
-  <script type="xxx" id="ch0104/12">
+  <script xtype="xxx" id="ch0104/12">
     var s = Number(prompt('s'))
     t1 = s / 1.2;
     t2 = s / 3 + 50;
-    if (t1 > t2) {
+    if (t1 > t2)
       console.log('Bike')
-    } else if (t1 < t2) {
+    if (t1 < t2)
       console.log('Walk')
-    } else {
+    if (t1 == t2)
       console.log('All')
-    }
   </script>
 
   <script type="xxx" id="ch0104/13">
@@ -448,7 +447,7 @@
   </script>
 
   <!-- ch0105 -->
-  <script type="xxx" id="ch0105/01">
+  <script xtype="xxx" id="ch0105/01">
     var n = parseInt(prompt('n:'))
     var s = 0
     for (var i = 1;i <= n;i++) {
@@ -456,46 +455,6 @@
       var s = s + a
     }
     console.log(s / n)
-  </script>
-
-  <script type="xxx" id="ch0105/02">
-    var s = 0
-    for (var i = 1;i <= 12;i++) {
-      var a = parseInt(prompt('a:'))
-      var s = s + a
-    }
-    console.log('$'+ (s / 12).toFixed(2))
-  </script>
-
-  <script type="xxx" id="ch0105/03">
-    var n = parseInt(prompt('n:'))
-    var s = 0
-    for (var i = 1;i <= n;i++) {
-      var a = Number(prompt('a:'))
-      var s = s + a
-    }
-    console.log((s / n).toFixed(4))
-  </script>
-
-  <script type="xxx" id="ch0105/04">
-    var n = parseInt(prompt('n:'))
-    var s = 0
-    for (var i = 1;i <= n;i++) {
-      var a = Number(prompt('a:'))
-      var s = s + a
-    }
-    console.log(s,(s / n).toFixed(5))
-  </script>
-
-  <script type="xxx" id="ch0105/05">
-    var n = parseInt(prompt('n:'))
-    var s = 0
-    a = []
-    for (var i = 1;i <= n;i++) {
-      a.push(prompt('a:'))
-      var s = Math.max(...a)
-    }
-    console.log(s)
   </script>
 </body>
 </html>

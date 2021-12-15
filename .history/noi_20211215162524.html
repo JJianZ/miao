@@ -487,13 +487,12 @@
     console.log(s,(s / n).toFixed(5))
   </script>
 
-  <script type="xxx" id="ch0105/05">
+  <script xtype="xxx" id="ch0105/05">
     var n = parseInt(prompt('n:'))
     var s = 0
-    a = []
     for (var i = 1;i <= n;i++) {
-      a.push(prompt('a:'))
-      var s = Math.max(...a)
+      var a = parseInt(prompt('a:'))
+      var s = Math.max(a)
     }
     console.log(s)
   </script>
