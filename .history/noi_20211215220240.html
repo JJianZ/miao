@@ -616,33 +616,15 @@
     console.log(x.toFixed(4))
   </script>
 
-  <script type="xxx" id="ch0105/15">
+  <script xtype="xxx" id="ch0105/15">
     var R = parseInt(prompt('R:'))
     var M = parseInt(prompt('M:'))
     var Y = parseInt(prompt('Y:'))
-    var money = M
-    for (i = 0 ; i < Y;i++) {
-      money = money * (R / 100 + 1);
+    var maney = M
+    for (i = 0 ; i < R;i++) {
+      money = money * (100 + R ) / 100;
     }
-    console.log(parseInt(money))
-  </script>
-
-  <script xtype="xxx" id="ch0105/16">
-    var N = parseInt(prompt('N:'))
-    var K = parseInt(prompt('K:'))
-    var house = 200
-    var money = N
-    var y = 1
-    do {
-      house = house * (K / 100 + 1)
-      money = money + N
-      y = y + 1
-    } while (money < house && y <= 20) ;
-    if (money >= house) {
-      console.log(y)
-    } else {
-      console.log('Impossible')
-    }
+    console.log(meney)
   </script>
 </body>
 </html>

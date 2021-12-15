@@ -632,13 +632,14 @@
     var K = parseInt(prompt('K:'))
     var house = 200
     var money = N
-    var y = 1
+    var y = 0
     do {
       house = house * (K / 100 + 1)
       money = money + N
       y = y + 1
     } while (money < house && y <= 20) ;
     if (money >= house) {
+      console.log(money,house)
       console.log(y)
     } else {
       console.log('Impossible')

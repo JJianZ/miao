@@ -630,18 +630,15 @@
   <script xtype="xxx" id="ch0105/16">
     var N = parseInt(prompt('N:'))
     var K = parseInt(prompt('K:'))
-    var house = 200
-    var money = N
-    var y = 1
-    do {
-      house = house * (K / 100 + 1)
-      money = money + N
-      y = y + 1
-    } while (money < house && y <= 20) ;
-    if (money >= house) {
-      console.log(y)
-    } else {
-      console.log('Impossible')
+    var f = 200
+    for (i = 0 ; i < 20;i++) {
+      f = f * (K / 100 + 1)
+      var M = f / (N++)
+      if (M <= 20) {
+        console.log(M)
+      } else {
+        console.log('Impossible')
+      }
     }
   </script>
 </body>
