@@ -181,11 +181,7 @@
 
   <script type="xxx" id="ch0104/02">
     var n = Number(prompt('n:'))
-    if (n >= 0) {
-      console.log(n)
-    } else if (n < 0) {
-      console.log((-1) * n)
-    }
+    console.log(Math.abs(n).toFixed(2))
   </script>
 
   <script type="xxx" id="ch0104/03">
@@ -201,7 +197,7 @@
   <script type="xxx" id="ch0104/04">
     var n = prompt('n:')
     var a = n.charCodeAt()
-    if (a % 2 == 0) {
+    if (a % 2 ==0) {
       console.log('NO')
     }
     else {
@@ -310,14 +306,16 @@
   </script>
 
   <script type="xxx" id="ch0104/12">
-    var s = parseInt(prompt('s:'))
-    m = 23 + 27 + (s / 3)
+    var s = prompt('s:'),
+    m = 50 + s / 3,
     n = s / 1.2
     if (m < n) {
       console.log('Bick')
-    } else if (m > n) {
+    }
+    else if (m > n) {
       console.log('Walk')
-    } else {
+    }
+    else {
       console.log('All')
     }
   </script>
@@ -417,21 +415,31 @@
   </script>
 
   <script xtype="xxx" id="ch0104/20">
-    var a = parseInt(prompt('a:'))
-    var b = parseInt(prompt('b:'))
-    var c = parseInt(prompt('c:'))
-    var delta = b * b - 4 * a * c
-    if (delta == 0 ) {
-        var x = (-b) / (2 * a)
-        console.log('x1=x2=' + x)
-    } else {
-      var d = Math.sqrt(4 * a * c - (b * b)) / (2 * a)
-      var e = -(Math.sqrt(4 * a * c - (b * b)) / (2 * a))
-      var x1 = (-b) / (2 * a)
-      var x2 = (-b) / (2 * a)
-      console.log('x1=' + x1.toFixed(5) + '+' + d.toFixed(5) + 'i')
-      console.log('x2=' + x2.toFixed(5) + e.toFixed(5) + 'i')
-      console.log(x1,x2,Math.sqrt(delta))
+    var a = Number(prompt('a:'))
+    var b = Number(prompt('b:'))
+    var c = Number(prompt('c:'))
+    var d = b * b - 4 * a * c
+    var x1 = (-b + Math.sqrt(d))/ (2 * a)
+    var x2 = (-b - Math.sqrt(d))/ (2 * a)
+    if (d > 0) {
+      if (b * b == 4 * a * c) {
+      alert(x1)
+      }
+      else if (b * b > 4 * a * c){
+        alert(x1)
+        alert(x2)
+      }
+      else {
+        var d =  Math.sqrt(4 * a * c - (b * b)) / (2 * a)
+        var e =  -(Math.sqrt(4 * a * c - (b * b)) / (2 * a))
+        var x1 = b / (2 * a)
+        var x2 = (-b) / (2 * a)
+        alert(x1.toFixed(5) + '+' + d.toFixed(5) + 'i')
+        alert(x2.toFixed(5) + '+' + e.toFixed(5) + 'i')
+      }
+    }
+    else {
+      alert ('无解')
     }
   </script>
 

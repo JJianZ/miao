@@ -25,8 +25,8 @@
     var A = Number(prompt ('A:'))
     var B= Number(prompt ('B:'))
     var C= Number(prompt ('C:'))
-    var r = (A + B) / C
-    console.log (parseInt(r))
+
+    console.log (parseInt(((A + B) / C)))
   </script>
 
   <script type="xxx" id="ch0103/04">
@@ -140,6 +140,7 @@
     var b = Math.sqrt(Number(((x1 - x3) ** 2) + ((y1 - y3) ** 2)))
     var c = Math.sqrt(Number(((x2 - x3) ** 2) + ((y2 - y3) ** 2)))
     var p = Number(a + b + c) / 2
+    // var h = Math.sqrt(Number(((4 * a ** 2 * b ** 2) - ((a ** 2 - c ** 2 + b** 2) ** 2)) / (2 * a)))
     var S = Math.sqrt(p * ((p - a) * (p - b) * (p - c)))
     console.log (S.toFixed(2))
   </script>
@@ -181,11 +182,7 @@
 
   <script type="xxx" id="ch0104/02">
     var n = Number(prompt('n:'))
-    if (n >= 0) {
-      console.log(n)
-    } else if (n < 0) {
-      console.log((-1) * n)
-    }
+    console.log(Math.abs(n).toFixed(2))
   </script>
 
   <script type="xxx" id="ch0104/03">
@@ -201,7 +198,7 @@
   <script type="xxx" id="ch0104/04">
     var n = prompt('n:')
     var a = n.charCodeAt()
-    if (a % 2 == 0) {
+    if (a % 2 ==0) {
       console.log('NO')
     }
     else {
@@ -310,14 +307,16 @@
   </script>
 
   <script type="xxx" id="ch0104/12">
-    var s = parseInt(prompt('s:'))
-    m = 23 + 27 + (s / 3)
+    var s = prompt('s:'),
+    m = 50 + s / 3,
     n = s / 1.2
     if (m < n) {
       console.log('Bick')
-    } else if (m > n) {
+    }
+    else if (m > n) {
       console.log('Walk')
-    } else {
+    }
+    else {
       console.log('All')
     }
   </script>
@@ -417,21 +416,25 @@
   </script>
 
   <script xtype="xxx" id="ch0104/20">
-    var a = parseInt(prompt('a:'))
-    var b = parseInt(prompt('b:'))
-    var c = parseInt(prompt('c:'))
-    var delta = b * b - 4 * a * c
-    if (delta == 0 ) {
-        var x = (-b) / (2 * a)
-        console.log('x1=x2=' + x)
-    } else {
-      var d = Math.sqrt(4 * a * c - (b * b)) / (2 * a)
-      var e = -(Math.sqrt(4 * a * c - (b * b)) / (2 * a))
-      var x1 = (-b) / (2 * a)
+    var a = Number(prompt('a:'))
+    var b = Number(prompt('b:'))
+    var c = Number(prompt('c:'))
+    var x1 = (-b + Math.sqrt(b * b - 4 * a * c))/ (2 * a)
+    var x2 = (-b - Math.sqrt(b * b - 4 * a * c))/ (2 * a)
+    if (b * b == 4 * a * c) {
+      console.log(x1)
+    }
+    else if (b * b > 4 * a * c){
+      console.log(x1)
+      console.log(x2)
+    }
+    else {
+      var d =  Math.sqrt(4 * a * c - (b * b)) / (2 * a)
+      var e =  -(Math.sqrt(4 * a * c - (b * b)) / (2 * a))
+      var x1 = b / (2 * a)
       var x2 = (-b) / (2 * a)
-      console.log('x1=' + x1.toFixed(5) + '+' + d.toFixed(5) + 'i')
-      console.log('x2=' + x2.toFixed(5) + e.toFixed(5) + 'i')
-      console.log(x1,x2,Math.sqrt(delta))
+      console.log(x1.toFixed(5) + '+' + d.toFixed(5) + 'i')
+      console.log(x2.toFixed(5) + '+' + e.toFixed(5) + 'i')
     }
   </script>
 

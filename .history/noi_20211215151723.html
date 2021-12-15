@@ -421,17 +421,17 @@
     var b = parseInt(prompt('b:'))
     var c = parseInt(prompt('c:'))
     var delta = b * b - 4 * a * c
+    var x1 = (-b + Math.sqrt(delta)) / (2 * a)
+    var x2 = (-b - Math.sqrt(delta)) / (2 * a)
     if (delta == 0 ) {
         var x = (-b) / (2 * a)
         console.log('x1=x2=' + x)
     } else {
       var d = Math.sqrt(4 * a * c - (b * b)) / (2 * a)
       var e = -(Math.sqrt(4 * a * c - (b * b)) / (2 * a))
-      var x1 = (-b) / (2 * a)
-      var x2 = (-b) / (2 * a)
+
       console.log('x1=' + x1.toFixed(5) + '+' + d.toFixed(5) + 'i')
       console.log('x2=' + x2.toFixed(5) + e.toFixed(5) + 'i')
-      console.log(x1,x2,Math.sqrt(delta))
     }
   </script>
 
