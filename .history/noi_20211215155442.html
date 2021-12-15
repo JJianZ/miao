@@ -310,16 +310,16 @@
     }
   </script>
 
-  <script xtype="xxx" id="ch0104/12">
+  <script type="xxx" id="ch0104/12">
     var s = parseInt(prompt('s:'))
     var m = (s / 3) + 50
     var n = s / 1.2
     if (m < n) {
-      alert('Bick')
+      console.log('Bick')
     } else if (m > n) {
-      alert('Walk')
+      console.log('Walk')
     } else {
-      alert('All')
+      console.log('All')
     }
   </script>
 
@@ -447,13 +447,14 @@
 
   <!-- ch0105 -->
   <script xtype="xxx" id="ch0105/01">
+    debugger
     var n = parseInt(prompt('n:'))
     var s = 0
     for (var i = 1;i <= n;i++) {
       var a = parseInt(prompt('a:'))
       var s = s + a
     }
-    console.log(s / n)
+    console.log(s / a)
   </script>
 </body>
 </html>
