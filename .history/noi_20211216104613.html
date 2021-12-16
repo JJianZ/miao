@@ -654,82 +654,23 @@
     console.log(parseInt(money))
   </script>
 
-  <script type="xxx" id="ch0105/16">
+  <script xtype="xxx" id="ch0105/16">
     var N = parseInt(prompt('N:'))
     var K = parseInt(prompt('K:'))
     var house = 200
     var money = N
     var y = 1
-    for (i = 1; i <= 20 ; i++) {
+    for (i = 1; i <= y ; i++) {
       house = house * (K / 100 + 1)
       money = money + N
       y = y + 1
       if (money >= house) {
         console.log(y)
-        break
       } else {
         console.log('Impossible')
       }
     }
 
-  </script>
-
-  <script type="xxx" id="ch0105/17">
-    var k = parseInt(prompt('k:'))
-    s = []
-    s[1] = 1
-    s[2] = 1
-    for (i = 3; i <= k;i++) {
-      s[i] = s[i - 1] + s[i - 2]
-    }
-    console.log(s[k])
-  </script>
-
-  <script type="xxx" id="ch0105/18">
-    var n = parseInt(prompt('n:'))
-    var x1 = parseInt(prompt('x1:'))
-    var x2 = parseInt(prompt('x2:'))
-    var x = x2 / x1
-    for (i = 2; i <= n; i++) {
-      var a1 = parseInt(prompt('a1:'))
-      var a2 = parseInt(prompt('a2:'))
-      var y1 = a1
-      var y2 = a2
-      var y = y2 / y1
-      if (y - x > 0.05) {
-        console.log('better')
-      } else if (x - y > 0.05) {
-        console.log('worse')
-      } else {
-        console.log('same')
-      }
-    }
-  </script>
-
-  <script type="xxx" id="ch0105/19">
-    var n = parseInt(prompt('n:'))
-    for (i = 1; i <= n; i++) {
-      var x = parseInt(prompt('x1:'))
-      var y = parseInt(prompt('x2:'))
-      var people = parseInt(prompt('people:'))
-      var s = Math.sqrt(Math.pow(x,2) + Math.pow(y,2))
-      var cometime = Math.ceil(1 * people + s / 50)
-      var backtime = Math.ceil(0.5 * people + s / 50)
-      var time = cometime + backtime
-      console.log(time)
-    }
-
-  </script>
-
-  <script xtype="xxx" id="ch0105/20">
-    var h = parseInt(prompt('h:'))
-    var s = 0
-    for (i = 1; i <= 10; i++) {
-      s = s + 1.5 * h
-      h = h * 0.5
-    }
-    console.log(s)
-    console.log(h)
   </script>
 </body>
 </html>
