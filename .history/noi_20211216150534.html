@@ -261,19 +261,19 @@
   <script type="xxx" id="ch0104/09">
     var x = parseInt(prompt('x:'))
 
-     if (x % 3 == 0 || x % 5 == 0 || x % 7 == 0) {
-       if (x % 3 == 0) {
-         console.log(3)
-       }
-       if (x % 5 == 0) {
-         console.log(5)
-       }
-       if (x % 7 == 0) {
-         console.log(7)
-       }
-     } else {
-       console.log(x)
-     }
+    //  if (x % 3 == 0 || x % 5 == 0 || x % 7 == 0) {
+    //    if (x % 3 == 0) {
+    //      console.log(3)
+    //    }
+    //    if (x % 5 == 0) {
+    //      console.log(5)
+    //    }
+    //    if (x % 7 == 0) {
+    //      console.log(7)
+    //    }
+    //  } else {
+    //    console.log('x')
+    //  }
 
     // if (x % 3 == 0 && x % 5 == 0 && x % 7 == 0) {
     //   console.log('x')
@@ -289,19 +289,19 @@
     //   }
     // }
 
-    // var flag = true
-    // if (x % 3 == 0) {
-    //   console.log(3)
-    // }
-    // if (x % 5 == 0) {
-    //   console.log(5)
-    // }
-    // if (x % 7 == 0) {
-    //   console.log(7)
-    // }
-    // if (!flag) {
-    //   console.log('x')
-    // }
+    var flag = true
+    if (x % 3 == 0) {
+      console.log(3)
+    }
+    if (x % 5 == 0) {
+      console.log(5)
+    }
+    if (x % 7 == 0) {
+      console.log(7)
+    }
+    if (!flag) {
+      console.log('x')
+    }
   </script>
 
   <script type="xxx" id="ch0104/10">
@@ -484,7 +484,7 @@
     console.log((s / n).toFixed(2))
   </script>
 
-  <script type="xxx" id="ch0105/02">
+  <script xtype="xxx" id="ch0105/02">
     var s = 0
     for (var i = 1;i <= 12;i++) {
       var a = Number(prompt('a:').toFixed(2))
