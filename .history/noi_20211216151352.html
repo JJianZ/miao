@@ -666,11 +666,11 @@
       house = house * (K / 100 + 1)
       money = money + N
       y = y + 1
-      if (money < house) {
-        console.log('Impossible')
+      if (money >= house) {
+        console.log(y)
         break
       } else {
-        console.log(y)
+        console.log('Impossible')
       }
     }
 
@@ -723,15 +723,15 @@
 
   </script>
 
-  <script xtype="xxx" id="ch0105/20">
+  <script type="xxx" id="ch0105/20">
     var h = parseInt(prompt('h:'))
-    var s = -h
-    for (i = 0; i < 10; i++) {
-      s = s + 2 * h
-      h = h / 2
+    var s = 0
+    for (i = 1; i <= 10; i++) {
+      s = s + 1.5 * h
+      h = h * 0.5
     }
-    console.log(s.toFixed(4))
-    console.log(h.toFixed(7))
+    console.log(s)
+    console.log(h)
   </script>
 </body>
 </html>
