@@ -848,13 +848,14 @@
 
   <script xtype="xxx" id="ch0105/27">
     var K = Number(prompt('K:'))
-    var n = 0,Sn = 0
-    do {
-      n = n + 1
+    var n,Sn = 0
+    for (i = 0;;i++) {
+      n = i
       Sn = Sn + 1 / n
-
-    } while (Sn <= K) {
-      console.log(n)
+      if (Sn >= K) {
+        console.log(n)
+        break
+      }
     }
   </script>
 </body>
