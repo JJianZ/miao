@@ -373,7 +373,7 @@
     if (x <= 1000 ) {
       money = 8
     } else {
-      money = Math.ceil((x - 1000) / 500) * 4 + 8
+      money = Math.ceil(((x - 1000) / 500) * 4) + 8
     }
     if (y == 'y') {
       money = money + 5
@@ -437,13 +437,13 @@
     if (c == '+') {
       console.log(x1 + x2)
     }
-    if (c == '-') {
+    else if (c == '-') {
       console.log(x1 - x2)
     }
-    if (c == '*') {
+    else if (c == '*') {
       console.log(x1 * x2)
     }
-    if (c == '/') {
+    else if (c == '/') {
       console.log(x1 / x2)
     }
   </script>
