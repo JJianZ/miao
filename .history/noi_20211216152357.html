@@ -258,7 +258,7 @@
     }
   </script>
 
-  <script type="xxx" id="ch0104/09">
+  <script xtype="xxx" id="ch0104/09">
     var n = parseInt(prompt('n:'))
 
      if (n % 3 == 0 || n % 5 == 0 || n % 7 == 0) {
@@ -484,7 +484,7 @@
     console.log((s / n).toFixed(2))
   </script>
 
-  <script type="xxx" id="ch0105/02">
+  <script xtype="xxx" id="ch0105/02">
     var s = 0
     for (var i = 1;i <= 12;i++) {
       var a = Number(prompt('a:').toFixed(2))
@@ -666,11 +666,11 @@
       house = house * (K / 100 + 1)
       money = money + N
       y = y + 1
-      if (money >=  house) {
-        console.log(y)
-        break
-      } else if (y > 20) {
+      if (money < house) {
         console.log('Impossible')
+        break
+      } else {
+        console.log(y)
       }
     }
 
