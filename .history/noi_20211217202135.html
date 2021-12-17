@@ -1031,148 +1031,24 @@
   <script type="xxx" id="ch0105/39">
     var n = parseInt(prompt('n:'))
     var sum = 0
-    var result = 0
-    // for (i = 0 ; i < n ; i++) {
-    //   if (i % 7 != 0 && i % 10 != 7 && i /10 != 7) {
-    //     sum = sum + i ** 2
-    //   }
-    // }
     for (i = 0 ; i < n ; i++) {
-      if (i % 7 != 0) {
-        var m = String(i).length
-        for (j = 0 ; j < m ; j++) {
-          var a = Math.trunc(i / 10 ** j % 10)
-          if (a == 7) {
-            result = 1
-          }
-        }
-        if (result != 1) {
-          sum = sum + i ** 2
-        }
+      if (i % 7 != 0 && i % 10 != 7 && i /10 != 7) {
+        sum = sum + i ** 2
       }
     }
     console.log(sum)
   </script>
 
-  <script type="xxx" id="ch0105/40">
+  <script xtype="xxx" id="ch0105/40">
     var n = parseInt(prompt('n:'))
     var sum = 0
-    for (i = 0 ; i <= n ; i++) {
-      var m = String(i).length
-      for (j = 0 ; j < m ; j++) {
-        var a = Math.trunc(i / 10 ** j % 10)
-        if (a == 1) {
-          sum = sum + 1
-        }
+    for (i = 0 ; i < n ; i++) {
+      if (i % 7 != 0 && i % 10 != 7 && i /10 != 7) {
+        sum = sum + i ** 2
       }
     }
     console.log(sum)
   </script>
 
-  <script type="xxx" id="ch0105/41">
-    var L = parseInt(prompt('L:'))
-    var R = parseInt(prompt('R:'))
-    var sum = 0
-    for (i = L ; i <= R ; i++) {
-      var m = String(i).length
-      for (j = 0 ; j < m ; j++) {
-        var a = Math.trunc(i / 10 ** j % 10)
-        if (a == 2) {
-          sum = sum + 1
-        }
-      }
-    }
-    console.log(sum)
-  </script>
-
-  <script type="xxx" id="ch0105/42">
-    var w = parseInt(prompt('w:'))
-    var h = parseInt(prompt('h:'))
-    var graphics = prompt('图形:')
-    var shapes = prompt('材质:')
-    var result = ''
-    if (shapes == 0) {
-      for (i = 0 ; i < w ; i++) {
-        for (j = 0;j < h ;j++) {
-          if (i == 0 || i == h - 1) {
-            result = result + graphics
-          }
-          else if (j == 0 || j == w - 1) {
-            result = result + graphics
-          }
-          else {
-            result = result + ' '
-          }
-        }
-        result = result + ' \n'
-      }
-    }
-    if (shapes == 1) {
-      for (i = 0 ; i < w ; i++) {
-        for (j = 0;j < h ;j++) {
-          result = result + graphics
-        }
-        result = result + ' \n'
-      }
-    }
-    console.log(result)
-  </script>
-
-  <script type="xxx" id="ch0105/43">
-    // debugger
-    var n = parseInt(prompt('n:'))
-    var result = 0
-    var s = 0
-    for (i = 1 ;i <= n ; i++) {
-      for (j = 0; j < i; j++) {
-        if (i % (j + 1) == 0) {
-          s = s + 1
-        }
-      }
-      if (s == 2) {
-        if (n % i == 0) {
-          result = Math.max(result,i)
-        }
-      }
-    }
-    console.log(result)
-  </script>
-
-  <script type="xxx" id="ch0105/44">
-    // debugger
-    var n = parseInt(prompt('n:'))
-    var result = 0
-    for (i = 0 ;i < Infinity; i++) {
-      for (j = 0, s = 0; j <= i ; j++) {
-        if (i % j == 0) {
-          s = s + 1
-        }
-      }
-      if (s == 2) {
-        result = result + 1
-        if (result == n) {
-          console.log(i)
-          break
-        }
-      }
-    }
-  </script>
-
-  <script type="xxx" id="ch0105/45">
-    // debugger
-    var n = parseInt(prompt('n:'))
-    var result = 0
-    var a = 0
-    var sum = 0
-    for (i = 1 ;i < n; i++) {
-      for (j = 1; j <= i ; j++) {
-        a = a + 1
-        sum = sum + i
-        if (a == n) {
-          console.log(sum)
-        }
-      }
-    }
-  </script>
 </body>
 </html>
