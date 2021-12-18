@@ -882,17 +882,14 @@
         result = '-'
         m = m - 1
       }
-      for (var i = 0, a = ''; i < m; i++) {
+      for (var i = 0, a = ''; i < n; i++) {
         a = Math.abs(Math.trunc(n / (10 ** i)) % 10)
-
         while (a === 0) {
           a = ''
         }
-
         result = result + a
       }
     }
-
     console.log(result)
   </script>
 

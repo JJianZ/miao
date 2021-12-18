@@ -874,26 +874,26 @@
   <script xtype="xxx" id="ch0105/29">
     var n = prompt('n')
     var m = n.length
-    var result = ''
+    var symbol = ''
+
     if (n == 0) {
-      result = 0
+      symbol = 0
     } else {
       if (n < 0) {
-        result = '-'
+        symbol = '-'
         m = m - 1
       }
-      for (var i = 0, a = ''; i < m; i++) {
-        a = Math.abs(Math.trunc(n / (10 ** i)) % 10)
+      for (var i = 0, result = ''; i < n; i++) {
+        result = Math.abs(Math.trunc(n / (10 ** i)) % 10)
 
-        while (a === 0) {
-          a = ''
+        while (result === 0) {
+          result = ''
         }
 
-        result = result + a
+        symbol = symbol + result
       }
     }
-
-    console.log(result)
+    console.log(symbol)
   </script>
 
   <script type="xxx" id="ch0105/30">
