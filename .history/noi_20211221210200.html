@@ -1371,11 +1371,11 @@
   </script>
 
 <!-- primes: 输出100以内的素数-->
-  <script type="xxx" id="prime">
-    // debugger
-    for (i = 2; i < 100; i++) {
-      var isprime = false
-      for (j = 2;j < i;j++) {
+  <script xtype="xxx" id="prime">
+
+    var isprime = false
+    for (i = 2; i < 100;i++) {
+      for (j = 2; j < i;j++) {
         if (i % j == 0) {
           isprime = true
         }
@@ -1386,17 +1386,5 @@
     }
 
   </script>
-
-<!-- itoa: 给定一个整数，将其转换为字符串：不能使用String等现成函数，但可以使用非此功能的其它函数，也不能利用任意运算符的自动类型转换 -->
-
-  <script xtype="xxx" id="itoa">
-
-  </script>
-    <script xtype="xxx" id="lcf&lcm">
-
-    </script>
-    <script xtype="xxx" id="sqrt">
-
-    </script>
 </body>
 </html>
