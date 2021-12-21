@@ -1393,20 +1393,8 @@
   </script>
 
 <!-- lcf&lcm: 输入两个数，输出它们的最大公约数和最小公倍数 -->
-  <script xtype="xxx" id="lcf&lcm">
-    var n = Number(prompt('n:'))
-    var m = Number(prompt('m:'))
-    var max = Math.max(n,m)
-    var min = Math.min(n,m)
-    if (n * m != 0) {
-      while (n % max != 0 || m % max != 0) {
-        max--
-      }
-      while (n % min != 0 || m % min != 0) {
-        min--
-      }
-      console.log(max,min,max)
-    }
+  <script type="xxx" id="lcf&lcm">
+
   </script>
 
 <!-- sqrt: 输入一个数，求它的平方根，精确到小数点后3位，不能使用Math.sqrt -->

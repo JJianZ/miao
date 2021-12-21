@@ -1398,14 +1398,17 @@
     var m = Number(prompt('m:'))
     var max = Math.max(n,m)
     var min = Math.min(n,m)
-    if (n * m != 0) {
-      while (n % max != 0 || m % max != 0) {
-        max--
+    if (max % min == 0) {
+      return min
+    } else {
+      return (max % min ,min)
+    }
+    for (i = n;i > 0;i--) {
+      for (j = m;j > 0;j--) {
+        if (n % i == 0 && m % j == 0 && i == j) {
+          return j
+        }
       }
-      while (n % min != 0 || m % min != 0) {
-        min--
-      }
-      console.log(max,min,max)
     }
   </script>
 
