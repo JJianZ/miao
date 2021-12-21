@@ -764,49 +764,28 @@
 
   <script type="xxx" id="ch0105/22">
     // debugger
-    // var sum = 0  /* 每个月零花钱 */
-    // var mom = 0 /* 给妈妈的钱 */
-    // var money = false /* 是否某个月钱不够用 */
-    // for (i = 1; i <= 12; i++) {
-    //   sum += 300
-    //   var m = parseInt(prompt('m:')) /* 每个月支出的钱 */
-    //   if (sum < m) {
-    //     console.log (-i)
-    //     money = true
-    //     break
-    //   }
-    //   sum -= m /* 月末剩的钱 */
-
-    //   if (sum >= 100) {
-    //     mom += sum - sum % 100 /* 给妈妈的钱 */
-    //     sum += sum % 100 /* 给妈妈后剩下的钱 */
-    //   }
-
-    // }
-    // if (!money || i == 13) {
-    //   sum += mom * 1.2
-    //   console.log(sum)
-    // }
-    var m = 0
-    var s = 0
-    var flag = false
-    for(var i = 1;i <= 12;i++){
-      m += 300
-      var b = Number(prompt())
-      if (m < b) {
-        console.log(-i);
-        flag = true
+    var sum = 0  /* 每个月零花钱 */
+    var mom = 0 /* 给妈妈的钱 */
+    var money = false /* 是否某个月钱不够用 */
+    for (i = 1; i <= 12; i++) {
+      sum += 300
+      var m = parseInt(prompt('m:')) /* 每个月支出的钱 */
+      if (sum < m) {
+        console.log (-i)
+        money = true
         break
       }
-      m = m -b
-      if (m >= 100) {
-        var l = m % 100
-        s += m - l
-        m = l
+      sum -= m /* 月末剩的钱 */
+
+      if (sum >= 100) {
+        mom += sum - sum % 100 /* 给妈妈的钱 */
+        sum += sum % 100 /* 给妈妈后剩下的钱 */
       }
+
     }
-    if (!flag) {
-      console.log(s * 1.2 + m);
+    if (!money || i == 13) {
+      sum += mom * 1.2
+      console.log(sum)
     }
   </script>
 
@@ -958,14 +937,14 @@
   </script>
 
   <script type="xxx" id="ch0105/32">
-    var n = Number(prompt())
+    var n = parseInt(prompt('n:'))
     var sum = 0
     var p = 1
     var q = 2
-    for(var i = 0;i < n;i++){
+    for (i = 0;i < n;i++) {
       sum += q / p
-      q = q + p
       p = q - p
+      q = q + p
     }
     console.log(sum.toFixed(4))
   </script>
@@ -1107,58 +1086,36 @@
   </script>
 
   <script type="xxx" id="ch0105/42">
-    // var w = Number(prompt('w:'))
-    // var h = Number(prompt('h:'))
-    // var graphics = prompt('图形:')
-    // var shapes = prompt('材质:')
-    // var result = ''
-    // if (shapes == 0) {
-    //   for (i = 0 ; i < w ; i++) {
-    //     for (j = 0;j < h ;j++) {
-    //       if (i == 0 || i == h - 1) {
-    //         result = result + graphics
-    //       }
-    //       else if (j == 0 || j == w - 1) {
-    //         result = result + graphics
-    //       }
-    //       else {
-    //         result = result + ' '
-    //       }
-    //     }
-    //     result = result + '\n'
-    //   }
-    // }
-    // if (shapes == 1) {
-    //   for (i = 0 ; i < w ; i++) {
-    //     for (j = 0;j < h ;j++) {
-    //       result = result + graphics
-    //     }
-    //     result = result + '\n'
-    //   }
-    // }
-    // console.log(result)
-    var h = Number(prompt())
-    var w = Number(prompt())
-    var char = prompt()
-    var fill = Number(prompt())
-    var str = ''
-    for(var i = 0;i < h;i++){
-      for(var j = 0;j < w;j++){
-        if(i == 0 || j == 0 || i == h - 1 || j == w - 1){
-          str += char
-        }else{
-          if (fill) {
-            str += char
-          }else{
-            str += ' '
+    var w = Number(prompt('w:'))
+    var h = Number(prompt('h:'))
+    var graphics = prompt('图形:')
+    var shapes = prompt('材质:')
+    var result = ''
+    if (shapes == 0) {
+      for (i = 0 ; i < w ; i++) {
+        for (j = 0;j < h ;j++) {
+          if (i == 0 || i == h - 1) {
+            result = result + graphics
+          }
+          else if (j == 0 || j == w - 1) {
+            result = result + graphics
+          }
+          else {
+            result = result + ' '
           }
         }
-      }
-      if (i < h - 1) {
-        str += '\n'
+        result = result + '\n'
       }
     }
-    console.log(str)
+    if (shapes == 1) {
+      for (i = 0 ; i < w ; i++) {
+        for (j = 0;j < h ;j++) {
+          result = result + graphics
+        }
+        result = result + '\n'
+      }
+    }
+    console.log(result)
   </script>
 
   <script type="xxx" id="ch0105/43">
@@ -1212,13 +1169,18 @@
   </script>
 
   <!-- narcissistic: 输入一个数，判断是否是水仙花数 -->
-  <script type="xxx" id="narcissistic">
+  <script xtype="xxx" id="narcissistic">
+    // debugger
     var n = Number(prompt('n:'))
     var sum = 0
-    var a = String(n).length
-    for (i = 0 ;i < a; i++) {
-      var m = Math.trunc((n / 10 ** i) % 10)
-      sum += m ** 3
+    for (i = 1 ;i <= n; i++) {
+      var m = i
+      var d = m % 10 / 10
+      while (i == d) {
+        sum += d ** 3
+        break
+      }
+      m = (m - d) / 10
     }
     console.log(sum)
     if (sum == n) {
@@ -1228,95 +1190,5 @@
     }
   </script>
 
-<!-- narcissistics: 输出10000以内的水仙花数 -->
-  <script type="xxx" id="narcissistics">
-    var sum = 0
-    var a = 0
-    for (i = 0 ;i < 10000; i++) {
-      var a = String(i).length
-      if (a == 4) {
-        for (j = 0;j < a;j++) {
-          var m = Math.trunc((i / 10 ** j) % 10)
-          sum += m ** 3
-        }
-        if (sum == i) {
-          console.log(i)
-        }
-      }
-    }
-  </script>
-
-<!-- palindrom: 输入一个数，判断它数是否是回文数，如1223221 -->
-  <script type="xxx" id="palindrom">
-    var n = Number(prompt('n'))
-    var m = String(n).length
-    var result = true
-    for (var i = 0;i < m / 2;i++){
-      var a = Math.trunc(n / 10 ** (i)) % 10
-      var b = Math.trunc(n / 10 ** (m - i - 1)) % 10
-      if (a != b) {
-        result = false
-      }
-    }
-    if (result == true){
-      console.log('YES')
-    } else {
-      console.log('NO')
-    }
-  </script>
-
-<!-- weekday: 输入年份与月份，输出这个月的第一天是周几（视具体设定，周一可以用1或0表示） -->
-  <script xtype="xxx" id="weekday">
-    var year = Number(prompt('year:'))
-    var month = Number(prompt('month:'))
-    var day = 0 /* 当月的天数 */
-    var sumday = 0  /* 输入月及其之前月的总天数 */
-    var leap = false /* 判断闰年 */
-    var totalday = 0 /* 年总天数 */
-
-    if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
-      leap = true
-    }
-
-    for (var i = 1900;i < year;i++) {
-      if (i % 4 == 0 && i % 100 != 0 || i % 400 == 0) {
-        totalday += 366
-      } else {
-        totalday += 365
-      }
-    }
-
-    for (var i = 1;i <= month;i++) {
-      switch (i) {
-        case 1:day = 31
-        case 3:day = 31
-        case 5:day = 31
-        case 7:day = 31
-        case 8:day = 31
-        case 10:day = 31
-        case 12:day = 31
-        break
-        case 4:day = 30
-        case 6:day = 30
-        case 9:day = 30
-        case 11:day = 30
-        break
-        case 2:
-          if (leap) {
-            day = 29
-            break
-          } else {
-            day = 28
-            break
-          }
-      }
-      if (i < month) {
-        sumday += day /* 输入的月份之前的所有天数 */
-      }
-    }
-    totalday += sumday  /* 将本年的天数加在之前计算的总天数上 */
-    var weekday = (totalday + 1) % 7  /* 总天数对7取余计算出当月第一天是星期几 */
-    console.log('周' + weekday)
-  </script>
 </body>
 </html>
