@@ -1652,12 +1652,12 @@
         var mid = (left + right) / 2  /* 中点 */
         if (mid * mid < n) {     /* 如果 n / 2 < √2 调整范围的端点*/
           left = mid
-        } else if (mid * mid > n){ /* 如果 n / 2 > √2 调整范围的端点*/
+        } else if (mid * mid > n){ /* 如果 n / 2 > √2 */
           right = mid
         } else {
           return mid
         }
-      } while (Math.abs(mid * mid - n) > 0.00000001) /* 精确度 */
+      } while (Math.abs(mid * mid - n) > 0.00000001)
       return mid
     }
 

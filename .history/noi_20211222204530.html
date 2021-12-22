@@ -1214,7 +1214,7 @@
   </script>
 
   <!-- narcissistic: 输入一个数，判断是否是水仙花数 -->
-  <script type="xxx" id="narcissistic">
+  <script xtype="xxx" id="narcissistic">
     // var n = Number(prompt('n:'))
     // var sum = 0
     // var a = String(n).length
@@ -1242,7 +1242,7 @@
       }
       return width
     }
-    function digitWidth2(m) {     /* 取位宽 */
+    function digitWidth2(m) {     /* 取各个位 */
       var width = 0
       do {
         var d = m % 10
@@ -1259,7 +1259,7 @@
       return result
     }
     function isnarcissistic(n) {
-      var w = digitWidth2(n)
+      var w = digitWidth(n)
       var sum = 0
       var m = n
       while (m > 0) {
@@ -1312,7 +1312,7 @@
   </script>
 
 <!-- palindrom: 输入一个数，判断它数是否是回文数，如1223221 -->
-  <script type="xxx" id="palindrom">
+  <script xtype="xxx" id="palindrom">
     // var n = Number(prompt('n'))
     // var m = String(n).length
     // var result = true
@@ -1328,7 +1328,7 @@
     // } else {
     //   console.log('NO')
     // }
-    // 法1
+
     function ispalindrom(n) {
       var m = n
       var reverse = 0 /* 反转数 */
@@ -1339,32 +1339,27 @@
       }
       return reverse == n
     }
-
-    // 法2
-    function digitWidth(m) {
+    function digitWidth(n) {
       var width = 0
       do {
-        var d = m % 10
+        var d = n % 10
         width++
-        m = (m - 10) / 10
-      } while (m > 0)
+        n = (n - 10) / 10
+      } while (n > 0)
       return width
     }
     function ispalindrom2(n) {
-      var width = digitWidth(n)
-
-      for (i = 1;i <= width / 2;i++) {
-        var a = Math.trunc(n / Math.pow(10,i - 1)) % 10  /* 取出右往左数第i位 */
-        var j = width - i + 1  /* 左往右第j位 */
-        var b = Math.trunc(n / Math.pow(10,j - 1)) % 10  /* 取出左往右数第i位 */
-        if (a != b) {
-          return false
-        }
+      var m = n
+      var reverse = 0 /* 反转数 */
+      while (m > 0) {
+        var d = m % 10   /* 取输入数的每一位 */
+        m = (m - d) / 10
+        reverse = reverse * 10 + d   /* 得到反转后的数 */
       }
-      return true
+      return reverse == n
     }
     var n = Number(prompt('n:'))
-    console.log(ispalindrom(n) ? 'YES' : 'NO')
+    console.log( ispalindrom(n) ? 'YES' : 'NO')
   </script>
 
 <!-- weekday: 输入年份与月份，输出这个月的第一天是周几（视具体设定，周一可以用1或0表示） -->
@@ -1425,143 +1420,76 @@
 
 <!-- complete-number: 输入一个数，判断它是否是完全数（自行查相关概念） -->
   <script type="xxx" id="complete-number">
-    // var n = Number(prompt('n'))
-    // var sum = 0
-    // for (var i = 1; i <= (n / 2) ; i ++){
-    //   if (n % i == 0){
-    //     sum = sum + i
-    //   }
-    // }
-    // if (sum == n){
-    //   console.log('YES')
-    // } else {
-    //   console.log('NO')
-    // }
-    function iscompletenumber(n) {
-      var sum = 1
-      var stop = n / 2
-      for (i = 2;i <= stop;i++) {
-        if (n % i == 0) {  /* 如果i是n的因子 */
-          sum +=i
-        }
+    var n = Number(prompt('n'))
+    var sum = 0
+    for (var i = 1; i <= (n / 2) ; i ++){
+      if (n % i == 0){
+        sum = sum + i
       }
-      return sum == n
     }
-    function iscompletenumber2(n) {
-      var sum = 1
-      var stop = Math.sqrt(n)
-      for (i = 2;i < stop; i++) {
-        if (n % i == 0) {   /* 如果i是n的因子 */
-          var j = n / i   /* 与i相对应的另一个因子 */
-          sum += i + j
-        }
-      }
-      if (stop == Math.trunc(stop)) {
-        sum += stop
-      }
-      return sum == n
+    if (sum == n){
+      console.log('YES')
+    } else {
+      console.log('NO')
     }
-    var n = Number(prompt('n:'))
-    console.log(iscompletenumber2(n) ? 'YES' : 'NO')
   </script>
 
 <!-- complete-numbers: 输出1000以内的完全数 -->
   <script type="xxx" id="complete-numbers">
-    // for(var i = 1 ; i <= 1000 ; i++) {
-    //   var sum = 0;
-    //   for(var j = 1 ; j <= (i / 2) ; j++){
-    //     if(i % j == 0){
-    //       sum += j;
-    //     }
-    //   }
-    //   if(sum == i){
-    //     console.log(i);
-    //   }
-    // }
-    function iscompletenumber(n) {
-      var sum = 1
-      var stop = Math.sqrt(n)
-      for (i = 2;i < stop; i++) {
-        if (n % i == 0) {   /* 如果i是n的因子 */
-          var j = n / i   /* 与i相对应的另一个因子 */
-          sum += i + j
+    for(var i = 1 ; i <= 1000 ; i++) {
+      var sum = 0;
+      for(var j = 1 ; j <= (i / 2) ; j++){
+        if(i % j == 0){
+          sum += j;
         }
       }
-      if (stop == Math.trunc(stop)) {
-        sum += stop
+      if(sum == i){
+        console.log(i);
       }
-      return sum == n
     }
 
-    for (n = 2; n <= 1000;n++) {
-      if (iscompletenumber(n)) {
-        console.log(n)
-      }
-    }
   </script>
 
 <!-- prime: 输入一个数，判断它是否是素数 -->
   <script type="xxx" id="prime">
-    // var n = Number(prompt('n:'))
-    // var isprime = false
 
-    // for (i = 2; i < n;i++) {
-    //   if (n % i == 0) {
-    //     isprime = true
-    //   }
-    // }
-    // if (n == 1) {
-    //   console.log('NO')
-    // } else if (!isprime) {
-    //   console.log('YES')
-    // } else {
-    //   console.log('NO')
-    // }
-
-    function isprime(n) {
-      for (i =2 ; i < n;i++) {
-        if (n % i == 0) {
-          return false
-        }
-      }
-      return true
-    }
     var n = Number(prompt('n:'))
-    console.log(isprime(n) ? 'YES' : 'NO')
+    var isprime = false
+
+    for (i = 2; i < n;i++) {
+      if (n % i == 0) {
+        isprime = true
+      }
+    }
+    if (n == 1) {
+      console.log('NO')
+    } else if (!isprime) {
+      console.log('YES')
+    } else {
+      console.log('NO')
+    }
   </script>
 
 <!-- primes: 输出100以内的素数-->
   <script type="xxx" id="primes">
-    // for (i = 2; i < 100; i++) {
-    //   var isprime = false
-    //   for (j = 2;j < i;j++) {
-    //     if (i % j == 0) {
-    //       isprime = true
-    //     }
-    //   }
-    //   if (!isprime) {
-    //     console.log(i)
-    //   }
-    // }
-
-    function isprime(n) {
-      for (i =2 ; i < n;i++) {
-        if (n % i == 0) {
-          return false
+    // debugger
+    for (i = 2; i < 100; i++) {
+      var isprime = false
+      for (j = 2;j < i;j++) {
+        if (i % j == 0) {
+          isprime = true
         }
       }
-      return true
-    }
-    for (n = 2;n <= 100;n++) {
-      if (isprime(n)) {
-        console.log(n)
+      if (!isprime) {
+        console.log(i)
       }
     }
+
   </script>
 
 <!-- itoa: 给定一个整数，将其转换为字符串：不能使用String等现成函数，但可以使用非此功能的其它函数，也不能利用任意运算符的自动类型转换 -->
   <script type="xxx" id="itoa">
-    function digitToChar(n) {   /* 把0-9的数字转换成字符串格式 */
+    function digitToChar(d) {
       if (n == 0) {
         return '0'
       }
@@ -1603,8 +1531,6 @@
       }
       return result
     }
-    var n = Number(prompt('n:'))
-    console.log(itoa(n))
   </script>
 
 <!-- lcf&lcm: 输入两个数，输出它们的最大公约数和最小公倍数 -->
@@ -1621,7 +1547,7 @@
   </script>
 
 <!-- sqrt: 输入一个数，求它的平方根，精确到小数点后3位，不能使用Math.sqrt -->
-  <script xtype="xxx" id="sqrt">
+  <script type="xxx" id="sqrt">
     // var n = Number(prompt('n:'))
     // if (n == 0) {
     //   console.log(0)
@@ -1643,34 +1569,28 @@
     //   }
     //   console.log(x2.toFixed(3))
     //  }
-
-    // 二分法
-    function sqrt(n) {
-      var left = 0  /* 起点 */
-      var right = n  /* 终点 */
+    function sqrt (n) {
+      var left = 0
+      var right = n
       do {
-        var mid = (left + right) / 2  /* 中点 */
-        if (mid * mid < n) {     /* 如果 n / 2 < √2 调整范围的端点*/
+        var mid = (left + right) / 2
+        if (mid * mid < n) {
           left = mid
-        } else if (mid * mid > n){ /* 如果 n / 2 > √2 调整范围的端点*/
+        } else if (mid * mid > n){
           right = mid
         } else {
           return mid
         }
-      } while (Math.abs(mid * mid - n) > 0.00000001) /* 精确度 */
+      } while (Math.abs(mid * mid - n) > 0.00000001)
       return mid
     }
-
-    // 牛顿法   斜率
-    function sqrt2(n) {
+    function sqrt(n) {
       var x = n
-      while (Math.abs(x * x - n) > 0.0000001) {
+      while (Math.abs(x * x -n) > 0.0000001) {
         x = x / 2 + n / 2 / x
       }
       return x
     }
-    var n = Number(prompt('n:'))
-    console.log(sqrt2(n).toFixed(3))
   </script>
 </body>
 </html>

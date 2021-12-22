@@ -1560,8 +1560,8 @@
   </script>
 
 <!-- itoa: 给定一个整数，将其转换为字符串：不能使用String等现成函数，但可以使用非此功能的其它函数，也不能利用任意运算符的自动类型转换 -->
-  <script type="xxx" id="itoa">
-    function digitToChar(n) {   /* 把0-9的数字转换成字符串格式 */
+  <script xtype="xxx" id="itoa">
+    function digitToChar(d) {   /* 把0-9的数字转换成字符串格式 */
       if (n == 0) {
         return '0'
       }
@@ -1595,7 +1595,6 @@
     }
     function itoa(n) {
       var result = ''
-
       while (n > 0) {
         var d = n % 10
         result = digitToChar(d) + result
@@ -1621,7 +1620,7 @@
   </script>
 
 <!-- sqrt: 输入一个数，求它的平方根，精确到小数点后3位，不能使用Math.sqrt -->
-  <script xtype="xxx" id="sqrt">
+  <script type="xxx" id="sqrt">
     // var n = Number(prompt('n:'))
     // if (n == 0) {
     //   console.log(0)
@@ -1643,34 +1642,28 @@
     //   }
     //   console.log(x2.toFixed(3))
     //  }
-
-    // 二分法
-    function sqrt(n) {
-      var left = 0  /* 起点 */
-      var right = n  /* 终点 */
+    function sqrt (n) {
+      var left = 0
+      var right = n
       do {
-        var mid = (left + right) / 2  /* 中点 */
-        if (mid * mid < n) {     /* 如果 n / 2 < √2 调整范围的端点*/
+        var mid = (left + right) / 2
+        if (mid * mid < n) {
           left = mid
-        } else if (mid * mid > n){ /* 如果 n / 2 > √2 调整范围的端点*/
+        } else if (mid * mid > n){
           right = mid
         } else {
           return mid
         }
-      } while (Math.abs(mid * mid - n) > 0.00000001) /* 精确度 */
+      } while (Math.abs(mid * mid - n) > 0.00000001)
       return mid
     }
-
-    // 牛顿法   斜率
-    function sqrt2(n) {
+    function sqrt(n) {
       var x = n
-      while (Math.abs(x * x - n) > 0.0000001) {
+      while (Math.abs(x * x -n) > 0.0000001) {
         x = x / 2 + n / 2 / x
       }
       return x
     }
-    var n = Number(prompt('n:'))
-    console.log(sqrt2(n).toFixed(3))
   </script>
 </body>
 </html>

@@ -144,22 +144,13 @@
     //        0.5    0.87
     //        -0.87  0.5
 
-    for (y = 0; y < 50;y++) {
-      for (x = 0;x < 50;x++) {
-        var color = 'rgb(' + x / 100 * 256 + ',' + y / 100 * 256 + ',' + '255)'
-        var x1 = 2 * x
-        var y1 = 2 * y
-        dot(x1 + 300,y1,color)
-      }
+    for (y = 0; y < 100;y++) {
+    for (x = 0;x < 100;x++) {
+      var color = 'rgb(' + x / 100 * 256 + ',' + y / 100 * 256 + ',' + '255)'
+      var x1 = 2 * x
+      var y1 = 2 * y
+      dot(x1,y1,color)
     }
-
-    for (y = 0; y < 50;y++) {
-      for (x = 0;x < 50;x++) {
-        var color = 'rgb(' + x / 100 * 256 + ',' + y / 100 * 256 + ',' + '255)'
-        var x1 = x
-        var y1 = 0.87 * x + 0.5 * y
-        dot(x1 + 100,y1 + 100,color)
-      }
-    }
+  }
 </script>
 </html>

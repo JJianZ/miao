@@ -1644,24 +1644,24 @@
     //   console.log(x2.toFixed(3))
     //  }
 
-    // 二分法
+    // 二分法   斜率
     function sqrt(n) {
       var left = 0  /* 起点 */
       var right = n  /* 终点 */
       do {
         var mid = (left + right) / 2  /* 中点 */
-        if (mid * mid < n) {     /* 如果 n / 2 < √2 调整范围的端点*/
+        if (mid * mid < n) {
           left = mid
-        } else if (mid * mid > n){ /* 如果 n / 2 > √2 调整范围的端点*/
+        } else if (mid * mid > n){
           right = mid
         } else {
           return mid
         }
-      } while (Math.abs(mid * mid - n) > 0.00000001) /* 精确度 */
+      } while (Math.abs(mid * mid - n) > 0.00000001)
       return mid
     }
 
-    // 牛顿法   斜率
+    // 牛顿法
     function sqrt2(n) {
       var x = n
       while (Math.abs(x * x - n) > 0.0000001) {
