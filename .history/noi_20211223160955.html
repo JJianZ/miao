@@ -1678,5 +1678,21 @@
     console.log(sqrt2(n).toFixed(3))
   </script>
 
+  <script>
+    var num = Number(prompt())
+    function sqrt(n) {
+      var x = num
+      while (Math.abs(x * x - num) > 0.0000001) {
+        x = x / 2 + num / 2 / x
+      }
+      return x
+    }
+
+    if (x == Math.trunc(x)) {
+      console.log('YES')
+    } else {
+      console.log('NO')
+    }
+  </script>
 </body>
 </html>

@@ -1245,8 +1245,8 @@
     function digitWidth2(m) {     /* 取位宽 */
       var width = 0
       do {
-        width++
         var d = m % 10
+        width++
         m = (m - d) / 10
       } while (m > 0)
       return width
@@ -1279,8 +1279,8 @@
     function digitWidth(m) {     /* 取位宽 */
       var width = 0
       do {
-        width++
         var d = m % 10
+        width++
         m = (m - d) / 10
       } while (m > 0)
       return width
@@ -1595,18 +1595,13 @@
     }
     function itob(n) {
       var result = ''
-      var m = Math.abs(n)
 
-      while (m > 0) {
-        var d = m % 10
+      while (n > 0) {
+        var d = n % 10
         result = digitToChar(d) + result
-        m = (m - d) / 10
+        n = (n - d) / 10
       }
-      if (n > 0) {
-        return result
-      } else {
-        return '-' + result
-      }
+      return result
     }
     var n = Number(prompt('n:'))
     console.log(itob(n))
@@ -1677,6 +1672,5 @@
     var n = Number(prompt('n:'))
     console.log(sqrt2(n).toFixed(3))
   </script>
-
 </body>
 </html>

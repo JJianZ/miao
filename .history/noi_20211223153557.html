@@ -1245,8 +1245,8 @@
     function digitWidth2(m) {     /* 取位宽 */
       var width = 0
       do {
-        width++
         var d = m % 10
+        width++
         m = (m - d) / 10
       } while (m > 0)
       return width
@@ -1279,8 +1279,8 @@
     function digitWidth(m) {     /* 取位宽 */
       var width = 0
       do {
-        width++
         var d = m % 10
+        width++
         m = (m - d) / 10
       } while (m > 0)
       return width
@@ -1560,7 +1560,7 @@
   </script>
 
 <!-- itoa: 给定一个整数，将其转换为字符串：不能使用String等现成函数，但可以使用非此功能的其它函数，也不能利用任意运算符的自动类型转换 -->
-  <script type="xxx" id="itob">
+  <script xtype="xxx" id="itob">
     function digitToChar(n) {   /* 把0-9的数字转换成字符串格式 */
       if (n == 0) {
         return '0'
@@ -1595,18 +1595,17 @@
     }
     function itob(n) {
       var result = ''
-      var m = Math.abs(n)
 
-      while (m > 0) {
-        var d = m % 10
+      while (n > 0) {
+        var d = n % 10
         result = digitToChar(d) + result
-        m = (m - d) / 10
+        n = (n - d) / 10
       }
-      if (n > 0) {
-        return result
-      } else {
-        return '-' + result
+      while (n < 0) {
+        result = '-' + result
       }
+      return result
+
     }
     var n = Number(prompt('n:'))
     console.log(itob(n))
@@ -1677,6 +1676,5 @@
     var n = Number(prompt('n:'))
     console.log(sqrt2(n).toFixed(3))
   </script>
-
 </body>
 </html>

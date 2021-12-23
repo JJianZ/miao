@@ -1560,7 +1560,7 @@
   </script>
 
 <!-- itoa: 给定一个整数，将其转换为字符串：不能使用String等现成函数，但可以使用非此功能的其它函数，也不能利用任意运算符的自动类型转换 -->
-  <script type="xxx" id="itob">
+  <script xtype="xxx" id="itob">
     function digitToChar(n) {   /* 把0-9的数字转换成字符串格式 */
       if (n == 0) {
         return '0'
@@ -1596,7 +1596,6 @@
     function itob(n) {
       var result = ''
       var m = Math.abs(n)
-
       while (m > 0) {
         var d = m % 10
         result = digitToChar(d) + result
@@ -1606,6 +1605,7 @@
         return result
       } else {
         return '-' + result
+
       }
     }
     var n = Number(prompt('n:'))
@@ -1677,6 +1677,5 @@
     var n = Number(prompt('n:'))
     console.log(sqrt2(n).toFixed(3))
   </script>
-
 </body>
 </html>

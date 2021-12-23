@@ -1214,7 +1214,7 @@
   </script>
 
   <!-- narcissistic: 输入一个数，判断是否是水仙花数 -->
-  <script type="xxx" id="narcissistic">
+  <script xtype="xxx" id="narcissistic">
     // var n = Number(prompt('n:'))
     // var sum = 0
     // var a = String(n).length
@@ -1245,8 +1245,8 @@
     function digitWidth2(m) {     /* 取位宽 */
       var width = 0
       do {
-        width++
         var d = m % 10
+        width++
         m = (m - d) / 10
       } while (m > 0)
       return width
@@ -1275,12 +1275,12 @@
   </script>
 
 <!-- narcissistics: 输出10000以内的水仙花数 -->
-  <script type="xxx" id="narcissistics">
+  <script xtype="xxx" id="narcissistics">
     function digitWidth(m) {     /* 取位宽 */
       var width = 0
       do {
-        width++
         var d = m % 10
+        width++
         m = (m - d) / 10
       } while (m > 0)
       return width
@@ -1288,7 +1288,7 @@
     function power(x,n) {    /* 等同于Math.pow */
       var result = 1
       for (i = 0;i < n; i++) {
-        result *= x
+        result *= n
       }
       return result
     }
@@ -1304,7 +1304,7 @@
       return sum == n
     }
 
-    for (n = 10; n <= 1000; n++) {
+    for (n = 1; n <= 10000; n++) {
       if (isnarcissistic(n)) {
         console.log(n)
       }
@@ -1595,18 +1595,13 @@
     }
     function itob(n) {
       var result = ''
-      var m = Math.abs(n)
 
-      while (m > 0) {
-        var d = m % 10
+      while (n > 0) {
+        var d = n % 10
         result = digitToChar(d) + result
-        m = (m - d) / 10
+        n = (n - d) / 10
       }
-      if (n > 0) {
-        return result
-      } else {
-        return '-' + result
-      }
+      return result
     }
     var n = Number(prompt('n:'))
     console.log(itob(n))
@@ -1677,6 +1672,5 @@
     var n = Number(prompt('n:'))
     console.log(sqrt2(n).toFixed(3))
   </script>
-
 </body>
 </html>
