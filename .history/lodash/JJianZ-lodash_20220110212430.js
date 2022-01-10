@@ -159,16 +159,9 @@ var jjianz = {
 
   uniq: function(array) {           //取出数组中的重复数字
     var map = {}
-    var result =[]
     for (var i = 0;i < array.length;i++) {
-      if (array[i] in map) {
-        map[array[i]]++
-      } else {
-        map[array[i]] = 1
-        result.push(array[i])
-      }
+
     }
-    return result
   }
   // uniqBy
   // without

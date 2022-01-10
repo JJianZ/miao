@@ -146,30 +146,9 @@ var jjianz = {
       }
     }
     return -1
-  },
-
-
-  reverse: function(array) {         //反转数组
-    var result = []
-    for (var i = array.length - 1;i >= 0;i--) {
-      result.push(array[i])
-    }
-    return result
-  },
-
-  uniq: function(array) {           //取出数组中的重复数字
-    var map = {}
-    var result =[]
-    for (var i = 0;i < array.length;i++) {
-      if (array[i] in map) {
-        map[array[i]]++
-      } else {
-        map[array[i]] = 1
-        result.push(array[i])
-      }
-    }
-    return result
   }
+  // reverse
+  // uniq
   // uniqBy
   // without
   // zip
