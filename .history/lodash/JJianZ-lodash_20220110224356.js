@@ -192,6 +192,7 @@ var jjianz = {
       for (var j = 0;j < array.length;j++){
         result.push(array[j][i])
       }
+      continue
     }
     return result
   }

@@ -189,8 +189,10 @@ var jjianz = {
   zip: function (...array) {
     var result = []
     for (var i = 0;i < array[0].length;i++) {
+      var result[i] = []
       for (var j = 0;j < array.length;j++){
-        result.push(array[j][i])
+        result[i][j] = array[j][i]
+        continue
       }
     }
     return result
