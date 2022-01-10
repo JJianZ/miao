@@ -174,14 +174,14 @@ var jjianz = {
 
   // uniqBy
 
-  without: function(array,...value) {   //删出array中与value相同的元素，并返回新的数组
+  without: function(array,...value) {   //删出array中与valuer相同的元素，并返回新的数组
+    var map = {}
     var result = []
 
     for (var i = 0;i < array.length;i++) {
-      if (value.includes(array[i])) {
-        continue
+      if (!(array[i] in map)) {
+        result.push(array[i])
       }
-      result.push(array[i])
     }
     return result
   }

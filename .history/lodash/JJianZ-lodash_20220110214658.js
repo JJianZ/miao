@@ -158,7 +158,7 @@ var jjianz = {
     return result
   },
 
-  uniq: function(array) {           //去除数组中的重复数字
+  uniq: function(array) {           //取出数组中的重复数字
     var map = {}
     var result =[]
     for (var i = 0;i < array.length;i++) {
@@ -174,16 +174,8 @@ var jjianz = {
 
   // uniqBy
 
-  without: function(array,...value) {   //删出array中与value相同的元素，并返回新的数组
-    var result = []
+  without: function(array,...value) {   //删出array中与valuer相同的元素，并返回新的数组
 
-    for (var i = 0;i < array.length;i++) {
-      if (value.includes(array[i])) {
-        continue
-      }
-      result.push(array[i])
-    }
-    return result
   }
   // zip
   // countBy
