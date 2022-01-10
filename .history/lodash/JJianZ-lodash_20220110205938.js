@@ -122,12 +122,8 @@ var jjianz = {
     return result
   },
 
-  join: function (array,separator = ',') {    //数组转换成字符串,并用separator中的符号分隔
-    var result = ''
-    for (var i = 0; i < array.length;i++) {
-      result += array[i] + '' + separator
-    }
-    return result
+  join: function (array,separator=',') {
+
   }
   // last
   // lastIndexOf
