@@ -124,11 +124,11 @@ var jjianz = {
 
   join: function (array,separator = ',') {    //数组转换成字符串,并用separator中的符号分隔
     var result = ''
-    var len = array.length - 1
-    for (var i = 0; i < len;i++) {
+    var n = array[length]
+    for (var i = 0; i < array.length;i++) {
       result += array[i] + '' + separator
     }
-    return result + array[len] + ''
+    return result + n + ''
   },
 
 

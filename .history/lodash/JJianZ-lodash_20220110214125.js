@@ -128,7 +128,7 @@ var jjianz = {
     for (var i = 0; i < len;i++) {
       result += array[i] + '' + separator
     }
-    return result + array[len] + ''
+    return result + array[0] + ''
   },
 
 
