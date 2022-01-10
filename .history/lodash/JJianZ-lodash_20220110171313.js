@@ -56,12 +56,7 @@ var jjianz = {
 
   //dropRightWhile
   // dropWhile
-  fill: function (ary,value,start = 0,end = ary.length) {
-    for (var i = start;i < end;i++) {
-      ary[i] = value
-    }
-    return ary
-  }
+  // fill
   // findIndex
   // findLastIndex
   // flatten

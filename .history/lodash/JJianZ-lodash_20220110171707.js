@@ -57,10 +57,11 @@ var jjianz = {
   //dropRightWhile
   // dropWhile
   fill: function (ary,value,start = 0,end = ary.length) {
-    for (var i = start;i < end;i++) {
-      ary[i] = value
+    var result = []
+    for (var i = 0;i < ary.length;i++) {
+      result.push(ary.splice(start,end,value))
     }
-    return ary
+    return result
   }
   // findIndex
   // findLastIndex
