@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function reverse(n) {
+      if (n == 0) {
+        return
+      }
+      var x = Number(prompt())
+      reverse(n - 1)
+      console.log(x)
+    }
+
+    // 斐波那契
+    function fibb(n) {
+      if (n < 3) {
+        return 1
+      } else {
+        return fibb(x - 1) + fibb (x - 2)
+      }
+    }
+
+    var array = []
+    function find(start, history) {
+      if (start == target) {
+        array.push(history)
+        return
+      }
+      if (start > target) {
+        return
+      }
+      find(start * 3, '(' + history + ') * 3')
+      find(start + 5, history + ' + 5')
+    }
+
+    find(1, '1')
+    return array
+
+
+    function countBs(str) {
+      var count = 0
+      for (i = 0;i < str.length;i++) {
+        if (ttr[i] === 'B') {
+          count++
+        }
+        return count
+      }
+    }
+
+    function countBs(str,char) {
+      var count = 0
+      for (i = 0;i < str.length;i++) {
+        if (str[i] === char) {
+          count++
+        }
+        return count
+      }
+    }
+
+    function min(a,b) {
+      if (a > b) {
+        return b
+      } else {
+        return a
+      }
+    }
+
+
+    function indexof(array,value) {
+      for (i = 0;i < array.length;i++) {
+        if (array[i] == value) {
+          return i
+        }
+      }
+      return -1
+    }
+
+    function push(array,val) {
+      array[val.length] = val
+      return array.length
+    }
+
+    function pop(array) {
+      var t = array[array.length - 1]
+      array.length--
+      return t
+    }
+
+    function slice(array,start,end) {
+      var result = []
+      for(i = start;i < end;i++) {
+        result.push(array[i])
+      }
+      return result
+    }
+
+    function fill(array,val) {
+      for(i = 0 ; i < array.length - 1;i ++) {
+        array[i] = val
+      }
+      return array
+    }
+
+    function sum() {
+      var count = 0
+      for(i = 0;i <arguments.length;i++) {
+        count += arguments[i]
+      }
+      return count
+    }
+
+    function random() {
+      var random1 = Math.floor(Math.random() * 100) + 1
+      return random1
+    }
+
+
+    //创建一个新数组反转数组
+    function reverseArray(array) {
+      var len = array.length
+      var result = Array(len)
+      for (i = len - 1;i >= 0;i--) {
+        result[len - i - 1] = array[i]
+      }
+      return result
+    }
+
+    //链表
+    var node = {
+      val:2,
+      next:null
+    }
+    function arrayToList(array) {
+      var nodes = []
+      for (var i = 0;i < node.length;i++) {
+        var node = {
+          val:array[i],
+          next: null
+        }
+        nodes.push(node)
+      }
+      for (var i = 0;i < nodes.length - 1;i++) {
+
+      }
+    }
+
+
+    function arrayToList2(array) {
+      if (array.length == 0) {
+        return null
+      }
+      var head = {
+        val:array[0],
+        next:null
+      }
+      var prev = head
+      for (var i = 0;i < array.length;i++) {
+        var node = {
+          val:array[i],
+          next: null
+        }
+        prev.next = node
+        prev = node
+      }
+      return head
+    }
+
+    function arrayToList3(array) {
+      var dummy = {
+        val:array[0],
+        next:null
+      }
+      var prev = dummy
+      for (var i = 0;i < array.length;i++) {
+        var node = {
+          val:array[i],
+          next: null
+        }
+        prev.next = node
+        prev = node
+      }
+      return dummy.next
+    }
+
+    function arrayToList4(array) {
+      var prev = null
+      for (var i = array.length - 1;i >= 0;i--) {
+        var node = {
+          val:array[i],
+          next: null
+        }
+        node.next = prev
+        prev = node
+      }
+      return prev
+    }
+
+    function arrayToListR(array) {
+      if(array.length == 0) {
+        return null
+      }
+      var head = {
+        val: array[0],
+        next: null
+      }
+      var tail = arrayToListR(array.slice(1))
+      head.next = tail
+      return tail
+    }
+
+    function arrayToListR2(array,start = 0) {
+      if(array.length == 0) {
+        return null
+      }
+      var head = {
+        val: array[0],
+        next: null
+      }
+      var tail = arrayToListR(array.slice(1))
+      head.next = tail
+      return tail
+    }
+  </script>
+</body>
+</html>
