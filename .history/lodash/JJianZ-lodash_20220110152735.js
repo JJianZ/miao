@@ -4,9 +4,7 @@ var jjianz = {
     var result = []
     while (num) {
       result.push(ary.splice(0,num))
-      if (ary.length == 0) {
-        break
-      }
+      num--
     }
     return result
   }

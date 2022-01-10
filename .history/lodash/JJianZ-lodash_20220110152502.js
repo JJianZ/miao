@@ -2,11 +2,9 @@ var jjianz = {
 
   chank:function (ary,num) {
     var result = []
-    while (num) {
+    for (var i = 0;i < ary.length;i++) {
       result.push(ary.splice(0,num))
-      if (ary.length == 0) {
-        break
-      }
+      num--
     }
     return result
   }
