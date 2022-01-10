@@ -1,4 +1,3 @@
-
 var jjianz = {
 
   chank:function (ary,num = 1) {
@@ -17,7 +16,7 @@ var jjianz = {
     for (var i = 0;i < ary.length;i++) {
       if (Boolean(ary[i]) == false) {
         result.push()
-      }else if (typeof(ary[i]) == 'string') {
+      }else if (typeof(ary[i]) !== 'numver') {
         result.push()
       } else {
         result.push(ary[i])
@@ -57,48 +56,4 @@ var jjianz = {
   dropRightWhile: function(ary,n = 1) {
 
   }
-
-  // dropWhile
-  // fill
-  // findIndex
-  // findLastIndex
-  // flatten
-  // flattenDeep
-  // flattenDepth
-  // fromPairs
-  // head
-  // indexOf
-  // initial
-  // join
-  // last
-  // lastIndexOf
-  // reverse
-  // uniq
-  // uniqBy
-  // without
-  // zip
-  // countBy
-  // every
-  // filter
-  // find
-  // forEach
-  // groupBy
-  // keyBy
-  // map
-  // partition
-  // reduce
-  // reduceRight
-  // reject
-  // sample
-  // shuffle
-  // size
-  // some
-  // isBoolean
-  // isEmpty
-  // isEqual
 }
-
-
-
-
-

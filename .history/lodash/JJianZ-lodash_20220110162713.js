@@ -1,7 +1,6 @@
-
 var jjianz = {
 
-  chank:function (ary,num = 1) {
+  chank:function (ary,num) {
     var result = []
     while (num) {
       result.push(ary.splice(0,num))
@@ -17,7 +16,7 @@ var jjianz = {
     for (var i = 0;i < ary.length;i++) {
       if (Boolean(ary[i]) == false) {
         result.push()
-      }else if (typeof(ary[i]) == 'string') {
+      }else if (typeof(ary[i]) !== 'numver') {
         result.push()
       } else {
         result.push(ary[i])
@@ -48,57 +47,9 @@ var jjianz = {
       return []
     }
     var result = []
-    for (var i = 0;i < ary.length - n;i++) {
-      result.push(ary[i])
+    for (var i = ary.length - 1;i >= n;i--) {
+      result.push(ary[ary.length])
     }
     return result
-  },
-
-  dropRightWhile: function(ary,n = 1) {
-
   }
-
-  // dropWhile
-  // fill
-  // findIndex
-  // findLastIndex
-  // flatten
-  // flattenDeep
-  // flattenDepth
-  // fromPairs
-  // head
-  // indexOf
-  // initial
-  // join
-  // last
-  // lastIndexOf
-  // reverse
-  // uniq
-  // uniqBy
-  // without
-  // zip
-  // countBy
-  // every
-  // filter
-  // find
-  // forEach
-  // groupBy
-  // keyBy
-  // map
-  // partition
-  // reduce
-  // reduceRight
-  // reject
-  // sample
-  // shuffle
-  // size
-  // some
-  // isBoolean
-  // isEmpty
-  // isEqual
 }
-
-
-
-
-
