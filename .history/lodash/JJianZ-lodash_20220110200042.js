@@ -90,17 +90,10 @@ var jjianz = {
       }
     }
     return result
-  },
-
-
-  //flattenDepth
-  // fromPairs
-  head: function (ary) {
-    if (ary.length == 0) {
-      return []
-    }
-    return ary[0]
   }
+  // flattenDepth
+  // fromPairs
+  // head
   // indexOf
   // initial
   // join

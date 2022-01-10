@@ -84,23 +84,16 @@ var jjianz = {
     var result = []
     for (var i = 0;i < ary.length;i++){
       if (Array.isArray(ary[i])) {
-        result.push(...flattenDeep(ary[i]))
+        this.flattenDeep(ary[i])
       } else {
         result.push(ary[i])
       }
     }
     return result
-  },
-
-
-  //flattenDepth
-  // fromPairs
-  head: function (ary) {
-    if (ary.length == 0) {
-      return []
-    }
-    return ary[0]
   }
+  // flattenDepth
+  // fromPairs
+  // head
   // indexOf
   // initial
   // join

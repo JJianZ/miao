@@ -93,14 +93,10 @@ var jjianz = {
   },
 
 
-  //flattenDepth
-  // fromPairs
-  head: function (ary) {
-    if (ary.length == 0) {
-      return []
-    }
-    return ary[0]
+  flattenDepth: function(ary,depth = 1) {
   }
+  // fromPairs
+  // head
   // indexOf
   // initial
   // join

@@ -65,42 +65,21 @@ var jjianz = {
 
   // findIndex
   // findLastIndex
-  flatten: function (ary) {
+  flattenL: function (ary) {
     var result = []
     for (var i = 0;i < ary.length;i++) {
       if (Array.isArray(ary[i])) {
         for (var j = 0;j < ary[i].length;j++) {
           result.push(ary[i][j])
         }
-      } else {
-        result.push(ary[i])
       }
     }
     return result
-  },
-
-
-  flattenDeep: function(ary) {
-    var result = []
-    for (var i = 0;i < ary.length;i++){
-      if (Array.isArray(ary[i])) {
-        result.push(...flattenDeep(ary[i]))
-      } else {
-        result.push(ary[i])
-      }
-    }
-    return result
-  },
-
-
-  //flattenDepth
-  // fromPairs
-  head: function (ary) {
-    if (ary.length == 0) {
-      return []
-    }
-    return ary[0]
   }
+  // flattenDeep
+  // flattenDepth
+  // fromPairs
+  // head
   // indexOf
   // initial
   // join
