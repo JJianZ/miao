@@ -26,15 +26,7 @@ var jjianz = {
   },
 
   drop: function(ary,n) {
-    // ary.slice(0,n)
-    // return ary
-    if (n > ary.length) {
-      return []
-    }
-    var result = []
-    for (var i = n;i < ary.length;i++) {
-      result.push(ary[i])
-    }
-    return result
+    ary.slice(0,n)
+    return ary
   }
 }

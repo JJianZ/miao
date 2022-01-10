@@ -31,10 +31,8 @@ var jjianz = {
     if (n > ary.length) {
       return []
     }
-    var result = []
-    for (var i = n;i < ary.length;i++) {
-      result.push(ary[i])
+    for (var i = 0;i < ary.length;i++) {
+
     }
-    return result
   }
 }

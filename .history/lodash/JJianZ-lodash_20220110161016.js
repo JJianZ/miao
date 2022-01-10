@@ -29,12 +29,10 @@ var jjianz = {
     // ary.slice(0,n)
     // return ary
     if (n > ary.length) {
-      return []
+      result []
     }
-    var result = []
-    for (var i = n;i < ary.length;i++) {
-      result.push(ary[i])
+    for (var i = 0;i < ary.length;i++) {
+
     }
-    return result
   }
 }

@@ -35,6 +35,5 @@ var jjianz = {
     for (var i = n;i < ary.length;i++) {
       result.push(ary[i])
     }
-    return result
   }
 }
