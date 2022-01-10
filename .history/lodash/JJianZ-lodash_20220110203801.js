@@ -85,7 +85,7 @@ var jjianz = {
     var result = []
     for (var i = 0;i < ary.length;i++){
       if (Array.isArray(ary[i])) {
-        result.push(...this.flattenDeep(ary[i]))
+        result.push(...flattenDeep(ary[i]))
       } else {
         result.push(ary[i])
       }
@@ -98,6 +98,9 @@ var jjianz = {
   // fromPairs
 
   head: function (ary) {          //取出数组的第一个元素
+    if (ary.length == 0) {
+      return []
+    }
     return ary[0]
   },
 
@@ -112,15 +115,8 @@ var jjianz = {
       }
     }
     return -1
-  },
-
-  initial:function (ary) {          //取出除数组最后一个元素的数组
-    var result = []
-    for (var i = 0; i < ary.length - 1;i++) {
-      result.push(ary[i])
-    }
-    return result
   }
+  // initial
   // join
   // last
   // lastIndexOf

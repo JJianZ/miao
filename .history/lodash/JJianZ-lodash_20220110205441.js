@@ -85,7 +85,7 @@ var jjianz = {
     var result = []
     for (var i = 0;i < ary.length;i++){
       if (Array.isArray(ary[i])) {
-        result.push(...this.flattenDeep(ary[i]))
+        result.push(...flattenDeep(ary[i]))
       } else {
         result.push(ary[i])
       }
@@ -114,7 +114,7 @@ var jjianz = {
     return -1
   },
 
-  initial:function (ary) {          //取出除数组最后一个元素的数组
+  initial:function (ary) {
     var result = []
     for (var i = 0; i < ary.length - 1;i++) {
       result.push(ary[i])

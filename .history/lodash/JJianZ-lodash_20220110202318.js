@@ -66,7 +66,7 @@ var jjianz = {
   // findIndex
   // findLastIndex
 
-  flatten: function (ary) {         //将多维数组展开一层
+  flatten: function (ary) {         //展开多维数组
     var result = []
     for (var i = 0;i < ary.length;i++) {
       if (Array.isArray(ary[i])) {
@@ -81,11 +81,11 @@ var jjianz = {
   },
 
 
-  flattenDeep: function(ary) {      //展开多维数组(递归)
+  flattenDeep: function(ary) {
     var result = []
     for (var i = 0;i < ary.length;i++){
       if (Array.isArray(ary[i])) {
-        result.push(...this.flattenDeep(ary[i]))
+        result.push(...flattenDeep(ary[i]))
       } else {
         result.push(ary[i])
       }
@@ -97,30 +97,14 @@ var jjianz = {
   //flattenDepth
   // fromPairs
 
-  head: function (ary) {          //取出数组的第一个元素
+  head: function (ary) {
+    if (ary.length == 0) {
+      return []
+    }
     return ary[0]
-  },
-
-
-  indexOf: function (ary,value,fromIndex = 0) {
-    if (fromIndex < 0) {
-      fromIndex += ary.length
-    }
-    for (var i = fromIndex;i < ary.length;i++) {
-      if (ary[i] == value) {
-        return i
-      }
-    }
-    return -1
-  },
-
-  initial:function (ary) {          //取出除数组最后一个元素的数组
-    var result = []
-    for (var i = 0; i < ary.length - 1;i++) {
-      result.push(ary[i])
-    }
-    return result
   }
+  // indexOf
+  // initial
   // join
   // last
   // lastIndexOf
