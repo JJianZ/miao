@@ -189,11 +189,9 @@ var jjianz = {
   zip: function (...array) {          //将多个数组，按顺序重组
     var result = []
     for (var i = 0;i < array[0].length;i++) {
-      var ary = []
       for (var j = 0;j < array.length;j++){
-        ary.push(array[j][i])
+        result.push(array[j][i])
       }
-      result.push(ary)
     }
     return result
   }
