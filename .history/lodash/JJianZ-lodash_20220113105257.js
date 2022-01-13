@@ -228,7 +228,7 @@ var jjianz = {
       sum++
     }
     return sum
-  },
+  }
 
   some: function(array,predicate) {
     for (var i = o;i < array.length;i++) {
@@ -237,7 +237,7 @@ var jjianz = {
       }
     }
     return fasle
-  }
+  },
 
   // isBoolean
   // isEmpty

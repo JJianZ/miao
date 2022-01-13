@@ -222,13 +222,7 @@ var jjianz = {
   // reject
   // sample
   // shuffle
-  size: function(collection) {
-    var sum = 0
-    for (var key in collection) {
-      sum++
-    }
-    return sum
-  },
+  // size
 
   some: function(array,predicate) {
     for (var i = o;i < array.length;i++) {
@@ -237,7 +231,7 @@ var jjianz = {
       }
     }
     return fasle
-  }
+  },
 
   // isBoolean
   // isEmpty
