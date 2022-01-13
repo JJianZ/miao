@@ -240,14 +240,14 @@ var jjianz = {
     return fasle
   },
 
-  isBoolean: function(value) {                //检查value是否为布尔或对象
+  isBoolean: function(value) {                //检查是否value是否为布尔基元或对象
     if (value == false || value == true || value != null || typeof(value) == 'object') {
       return true
     }
     return false
   },
 
-  isEmpty: function(value) {                 //检查value是否为空对象、集合、映射或集合
+  isEmpty: function(value) {
     for (var key in value) {
       return false
     }
@@ -256,11 +256,11 @@ var jjianz = {
 
   // isEqual
 
-  isNull: function(value) {                   //检查value是否为空
+  isNull: function(value) {
     return value == null
   },
 
-  isNumber: function(value) {                 //检查value是否对象
+  isNumber: function(value) {
     return typeof(value) == 'number'
   }
 }
