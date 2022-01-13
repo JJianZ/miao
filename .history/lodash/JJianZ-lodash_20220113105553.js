@@ -202,7 +202,7 @@ var jjianz = {
   // countBy
 
   every: function(array,predicate) {
-    for (var i = 0;i < array.length;i++) {
+    for (var i = o;i < array.length;i++) {
       if(!predicate(array[i])) {
         return false
       }
@@ -222,7 +222,6 @@ var jjianz = {
   // reject
   // sample
   // shuffle
-
   size: function(collection) {
     var sum = 0
     for (var key in collection) {
@@ -232,7 +231,7 @@ var jjianz = {
   },
 
   some: function(array,predicate) {
-    for (var i = 0;i < array.length;i++) {
+    for (var i = o;i < array.length;i++) {
       if(!predicate(array[i])) {
         return true
       }
@@ -241,28 +240,10 @@ var jjianz = {
   },
 
   isBoolean: function(value) {
-    if (value == false || value == true || value != null) {
-      return true
-    }
-    return false
-  },
 
-  isEmpty: function(value) {
-    for (var key in value) {
-      return false
-    }
-    return true
-  },
-
-  // isEqual
-
-  isNull: function(value) {
-    return value == null
-  },
-
-  isNumber: function(value) {
-    return typeof(value) == 'number'
   }
+  // isEmpty
+  // isEqual
 }
 
 

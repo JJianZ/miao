@@ -222,7 +222,6 @@ var jjianz = {
   // reject
   // sample
   // shuffle
-
   size: function(collection) {
     var sum = 0
     for (var key in collection) {
@@ -258,10 +257,6 @@ var jjianz = {
 
   isNull: function(value) {
     return value == null
-  },
-
-  isNumber: function(value) {
-    return typeof(value) == 'number'
   }
 }
 

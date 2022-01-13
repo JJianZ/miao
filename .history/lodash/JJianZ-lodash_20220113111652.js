@@ -222,7 +222,6 @@ var jjianz = {
   // reject
   // sample
   // shuffle
-
   size: function(collection) {
     var sum = 0
     for (var key in collection) {
