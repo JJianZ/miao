@@ -222,7 +222,6 @@ var jjianz = {
   // sample
   // shuffle
   // size
-
   some: function(array,predicate) {
     for (var i = o;i < array.length;i++) {
       if(!predicate(array[i])) {
@@ -230,8 +229,7 @@ var jjianz = {
       }
     }
     return fasle
-  },
-
+  }
   // isBoolean
   // isEmpty
   // isEqual

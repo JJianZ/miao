@@ -207,8 +207,7 @@ var jjianz = {
       }
     }
     return true
-  },
-
+  }
   // filter
   // find
   // forEach
@@ -222,16 +221,7 @@ var jjianz = {
   // sample
   // shuffle
   // size
-
-  some: function(array,predicate) {
-    for (var i = o;i < array.length;i++) {
-      if(!predicate(array[i])) {
-        return true
-      }
-    }
-    return fasle
-  },
-
+  // some
   // isBoolean
   // isEmpty
   // isEqual

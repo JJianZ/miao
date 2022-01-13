@@ -70,10 +70,9 @@ var jjianz = {
     var result = []
     for (var i = 0;i < array.length;i++) {
       if (Array.isArray(array[i])) {
-        // for (var j = 0;j < array[i].length;j++) {
-        //   result.push(array[i][j])
-        // }
-        result.push(...array[i])
+        for (var j = 0;j < array[i].length;j++) {
+          result.push(array[i][j])
+        }
       } else {
         result.push(array[i])
       }
@@ -197,18 +196,10 @@ var jjianz = {
       result.push(ary)
     }
     return result
-  },
+  }
 
   // countBy
-  every: function(array,predicate) {
-    for (var i = o;i < array.length;i++) {
-      if(!predicate(array[i])) {
-        return false
-      }
-    }
-    return true
-  },
-
+  // every
   // filter
   // find
   // forEach
@@ -222,16 +213,7 @@ var jjianz = {
   // sample
   // shuffle
   // size
-
-  some: function(array,predicate) {
-    for (var i = o;i < array.length;i++) {
-      if(!predicate(array[i])) {
-        return true
-      }
-    }
-    return fasle
-  },
-
+  // some
   // isBoolean
   // isEmpty
   // isEqual
